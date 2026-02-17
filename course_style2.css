@@ -1,0 +1,203 @@
+/* ============================= */
+/* COURSE DETAIL HERO */
+/* ============================= */
+
+.course-hero {
+  position: relative;
+  height: 420px;
+  background: url("https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+  overflow: hidden; /* VERY IMPORTANT */
+}
+
+.course-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1; /* ADD THIS */
+}
+
+.course-hero-content {
+  position: relative;
+  z-index: 2; /* Above overlay */
+}
+
+.course-category {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.course-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  max-width: 800px;
+}
+
+/* ============================= */
+/* COURSE INFO WRAPPER */
+/* ============================= */
+
+.course-info-wrapper {
+  position: relative;
+  z-index: 5; /* THIS FIXES YOUR ISSUE */
+  max-width: 1100px;
+  margin: -80px auto 80px;
+  padding: 0 20px;
+}
+
+/* Description Card */
+.course-description-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  z-index: 5;
+}
+
+.course-description-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #fd9b59;
+  font-weight: 600;
+}
+
+/* Stats Card */
+.course-stats-card {
+  background: #f9fafb;
+  padding: 25px 30px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stats-left {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stats-right {
+  display: flex;
+  gap: 15px;
+}
+
+.bookmark-btn,
+.share-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.bookmark-btn {
+  background: #e5e7eb;
+}
+
+.share-btn {
+  background: #e5e7eb;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .course-hero h1 {
+    font-size: 32px;
+  }
+
+  .course-stats-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .stats-left {
+    gap: 20px;
+  }
+
+}
+
+/* ============================= */
+/* ACCORDION SECTION */
+/* ============================= */
+
+.course-accordion-section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.accordion-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header span {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-content p {
+  padding-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}

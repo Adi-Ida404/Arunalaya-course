@@ -5,6 +5,7 @@
   <title>Certification Course in Clinical Taping</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="course_style.css">
+    <link rel="stylesheet" href="course_style2.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -20,7 +21,27 @@
       }, index * 200);
     });
   });
+  
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector("span");
+
+      header.classList.toggle("active");
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.textContent = "+";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = "−";
+      }
+    });
+  });
 </script>
+
 
 <body>
 
@@ -149,6 +170,139 @@
 
     </div>
   </section>
+
+  <!-- COURSE HERO SECTION -->
+  <section class="course-hero">
+
+    <div class="course-hero-content">
+      <p class="course-category">Certification Course in Clinical Taping</p>
+      <h1>Certification in Clinical Taping</h1>
+    </div>
+
+  </section>
+
+  <!-- COURSE INFO CARD -->
+  <section class="course-info-wrapper">
+
+    <div class="course-description-card">
+      <p>
+        Certification Course in Clinical Taping, accredited by the CPD Standards Office, UK,
+        offers a robust foundation in the rapidly evolving field of oncology.
+        Proficient use of taping methods can accelerate healing, reduce pain, and improve mobility, resulting in higher patient satisfaction and retention.
+      </p>
+
+      <a href="#" class="read-more">Read More →</a>
+    </div>
+
+    <div class="course-stats-card">
+
+      <div class="stats-left">
+        <div class="stat-item">
+          <span class="stat-label">Duration</span>
+          <span class="stat-value">3 Months</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-label">CPD Points</span>
+          <span class="stat-value">12</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-label">E-PHYSIO Points</span>
+          <span class="stat-value">1,200</span>
+        </div>
+      </div>
+
+      <div class="stats-right">
+        <button class="bookmark-btn">Bookmark</button>
+        <button class="share-btn">Share</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COURSE CURRICULUM ACCORDION -->
+  <section class="course-accordion-section">
+
+    <h2 class="accordion-title">Course Curriculum – Clinical Taping</h2>
+
+    <div class="accordion">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          1. Fundamentals of Clinical Taping
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Learn the core principles of clinical taping, including skin anatomy,
+            tape types, tension techniques, and safety protocols for effective application.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          2. Ankle & Foot Taping Techniques
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Master taping methods for ankle sprains, plantar fasciitis,
+            ligament instability, and sports-related injuries.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          3. Knee & Lower Limb Support
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Apply advanced taping for ACL support, patellofemoral pain,
+            hamstring strain, and post-rehabilitation stabilization.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          4. Shoulder & Upper Limb Taping
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Techniques for rotator cuff injuries, tennis elbow,
+            posture correction, and shoulder impingement syndrome.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          5. Sports Rehabilitation & Recovery Protocols
+          <span>+</span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Integrate taping into full rehabilitation programs
+            to accelerate recovery, reduce pain, and prevent reinjury.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
 
 </body>
 </html>
