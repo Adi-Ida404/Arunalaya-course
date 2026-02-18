@@ -329,8 +329,14 @@ form select:focus {
 }
 
 .logo img {
-  width: 100px;   /* adjust size if needed */
+  width: 80px;   /* adjust size if needed */
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 55px;   /* smaller size for phones */
+  }
 }
 
 /* Initial hidden state */
