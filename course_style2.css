@@ -165,7 +165,7 @@
 
 .accreditation-section {
   padding: 10px 10px;
-  background: #f3f4f6;
+  background: linear-gradient(to right, #f3f4f6, #F9F8F9);
 }
 
 .accreditation-container {
@@ -195,7 +195,7 @@
 .logo-card {
   flex: 1;
   min-width: 150px;
-  background: #f9fafb;
+  background: #ffffff;
   padding: 10px;
   border-radius: 15px;
   display: flex;
@@ -205,13 +205,13 @@
 }
 
 .logo-card:hover {
-  background: #eef2ff;
+  background: #ffffff;
   transform: translateY(-4px);
 }
 
 .logo-card img {
-  max-width: 100%;
-  height: auto;
+  max-width: auto;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -221,7 +221,7 @@
 
 .eligibility-section {
   padding: 20px 20px;
-  background: #f3f4f6;
+  background: linear-gradient(to right, #f3f4f6, #FAFAFB);
 }
 
 .eligibility-container {
@@ -273,7 +273,7 @@
 /* ============================= */
 
 .curriculum-section {
-  background: #f3f4f6;
+  background: linear-gradient(to right, #f3f4f6, #ffffff);
   padding: 40px 20px;
 }
 
