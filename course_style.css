@@ -7,6 +7,7 @@
 
 body {
   background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
 }
 
 .appointment-section {
@@ -118,35 +119,77 @@ body {
   padding: 35px;
 }
 
-.form-title {
-  margin-bottom: 25px;
-  color: #F4970B;
-  font-size: 22px;
-  text-align: center;
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border-top: 5px solid #F4970B;
 }
 
+/* Title */
+.form-title {
+  margin-bottom: 30px;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+
+.form-title span {
+  color: #F4970B;
+}
+
+/* Labels */
 form label {
   display: block;
-  margin: 15px 0 6px;
+  margin: 18px 0 8px;
   font-weight: 600;
   font-size: 14px;
+  color: #000;
 }
 
+/* Inputs */
 form input,
 form select {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
   font-size: 14px;
-  transition: 0.3s;
+  background: #fff;
+  transition: all 0.3s ease;
 }
 
+/* Focus State */
 form input:focus,
 form select:focus {
   border-color: #F4970B;
+  box-shadow: 0 0 0 3px rgba(244,151,11,0.15);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(123,45,58,0.1);
+}
+
+/* Button */
+.form-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #F4970B;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-btn:hover {
+  background: #000;
+  transform: translateY(-2px);
 }
 
 /* Terms */
