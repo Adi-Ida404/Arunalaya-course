@@ -199,7 +199,7 @@
   font-size: 14px;
   letter-spacing: 1px;
   color: #6b7280;
-  margin-bottom: 30px;
+  margin: 10px 0;
 }
 
 .accreditation-logos {
@@ -230,6 +230,43 @@
   max-width: auto;
   height: 80px;
   object-fit: contain;
+}
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  padding: 0 10px;
+  animation: scroll 25s linear infinite;
+}
+
+.logo-track img {
+  height: 60px;
+  margin: 0 40px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.logo-slider:hover .logo-track {
+  animation-play-state: paused;
 }
 
 /* ============================= */
