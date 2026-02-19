@@ -40,7 +40,7 @@ body {
   height: 40px;
   background: rgba(245, 183, 68, 0.952);
   animation: floatSquares 20s linear infinite;
-  bottom: -100px;
+  top: -60px; 
   border-radius: 6px;
 }
 
@@ -83,17 +83,15 @@ body {
 /* Animation */
 @keyframes floatSquares {
   0% {
-    transform: translateY(-1000px) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
+    transform: translateY(0) rotate(0deg);
     opacity: 1;
   }
   100% {
-    transform: translateY(0) rotate(360deg);
+    transform: translateY(100vh) rotate(360deg);
     opacity: 0;
   }
 }
+
 
 /* Dark overlay for readability */
 .hero-header::after {
