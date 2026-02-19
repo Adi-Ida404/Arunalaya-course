@@ -37,10 +37,9 @@
 }
 
 .course-hero-content {
-   position: relative;
+  position: relative;
   z-index: 3;
   color: white;
-  max-width: 800px;
 }
 
 .course-category {
@@ -52,7 +51,6 @@
 .course-hero h1 {
   font-size: 48px;
   font-weight: 800;
-  max-width: 800px;
 }
 
 /* ============================= */
