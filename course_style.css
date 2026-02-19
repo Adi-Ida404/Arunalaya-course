@@ -112,7 +112,7 @@ body {
 /* LOGO */
 .logo img {
   width: 110px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   animation: floatLogo 3s ease-in-out infinite alternate;
 }
 

@@ -29,10 +29,10 @@
 
   background:
     linear-gradient(to bottom,
-      rgba(243,244,246,1) 0%,     /* TOP fade into page bg */
-      rgba(80, 80, 80, 0.3) 15%,      /* dark overlay for text */
+      #EDEDED 0%,     /* TOP fade into page bg */
+      rgba(80, 80, 80, 0.35) 30%,      /* dark overlay for text */
       rgba(0,0,0,0.35) 70%,      
-      rgba(243,244,246,1) 100%   /* BOTTOM fade */
+      #EDEDED 100%   /* BOTTOM fade */
     );
 }
 
@@ -180,7 +180,7 @@
 
 .accreditation-section {
   padding: 10px 10px;
-  background: linear-gradient(to right, #f3f4f6, #F9F8F9);
+  background: #EDEDED;
 }
 
 .accreditation-container {
@@ -273,7 +273,7 @@
 
 .eligibility-section {
   padding: 20px 20px;
-  background: linear-gradient(to right, #f3f4f6, #FAFAFB);
+  background: #EDEDED;
 }
 
 .eligibility-container {
@@ -325,7 +325,7 @@
 /* ============================= */
 
 .curriculum-section {
-  background: linear-gradient(to right, #f3f4f6, #ffffff);
+  background: #EDEDED;
   padding: 40px 20px;
 }
 
