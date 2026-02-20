@@ -71,6 +71,7 @@
   .instructor,
   .section {
     order: 4;
+    font-size: 12px;
   }
 
   .video-preview img {

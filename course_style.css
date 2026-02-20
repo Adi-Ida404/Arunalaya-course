@@ -23,22 +23,22 @@ h2 {
 
 .main-header{
   display: flex;
-  align-items: top;
+  align-items: center;
   justify-content: left;
   gap: 16px;
   margin-bottom: 12px;
 }
 
 .main-header img{
-  width: 80px;
+  width: 70px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .header-img{
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   background-color: rgb(248,213, 138, 0.2);
@@ -46,6 +46,10 @@ h2 {
   align-items: center;
   justify-content: center;
   border: solid 2px rgba(255, 174, 0, 0.2);
+}
+
+.header-heading{
+  padding-top: 5px;
 }
 
 .subtitle {
@@ -185,7 +189,7 @@ h2 {
 }
 
 .features li span {
-  color: #22c55e;
+  color: #ffc547;
   font-weight: bold;
   margin-top: 2px;
 }
