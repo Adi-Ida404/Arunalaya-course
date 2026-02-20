@@ -294,7 +294,8 @@ body {
 }
 
 /* Button Container */
-.course-buttons {
+.course-buttons a,
+.course-buttons button {
   display: flex;
   flex-direction: column;   /* stack vertically */
   gap: 12px;
@@ -304,7 +305,8 @@ body {
 }
 
 /* Make buttons full width */
-.course-buttons a {
+.course-buttons a,
+.course-buttons button {
   width: 100%;
   padding: 12px 0;
   border-radius: 10px;
@@ -313,6 +315,10 @@ body {
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
+}
+
+.course-buttons button {
+  border: none;
 }
 
 /* Yellow Button */
