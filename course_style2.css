@@ -29,17 +29,17 @@
 
   background:
     linear-gradient(to bottom,
-      #EDEDED 0%,     /* TOP fade into page bg */
-      rgba(255, 255, 255, 0.6) 30%,      /* dark overlay for text */
-      rgba(255, 255, 255, 0.6) 70%,      
-      #EDEDED 100%   /* BOTTOM fade */
+      #ffffff 0%,     /* TOP fade into page bg */
+      rgba(236, 236, 236, 0.6) 30%,      /* dark overlay for text */
+      rgba(236, 236, 236, 0.6) 70%,      
+      #ffffff 100%   /* BOTTOM fade */
     );
 }
 
 .course-hero-content {
   position: relative;
   z-index: 3;
-  color: rgb(0, 0, 0);
+  color: rgb(46, 46, 46);
   padding-left: 100px;
 }
 
