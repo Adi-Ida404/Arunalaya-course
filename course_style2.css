@@ -30,8 +30,8 @@
   background:
     linear-gradient(to bottom,
       #EDEDED 0%,     /* TOP fade into page bg */
-      rgba(80, 80, 80, 0.35) 30%,      /* dark overlay for text */
-      rgba(0,0,0,0.35) 70%,      
+      rgba(255, 255, 255, 0.6) 30%,      /* dark overlay for text */
+      rgba(255, 255, 255, 0.6) 70%,      
       #EDEDED 100%   /* BOTTOM fade */
     );
 }
@@ -39,7 +39,8 @@
 .course-hero-content {
   position: relative;
   z-index: 3;
-  color: white;
+  color: rgb(0, 0, 0);
+  padding-left: 100px;
 }
 
 .course-category {
