@@ -294,4 +294,31 @@
     padding: 16px;
     font-size: 15px;
   }
+
+  .accreditation-card {
+    padding: 30px;
+  }
+
+  .logo-track {
+    gap: 40px;
+    animation-duration: 18s;
+  }
+
+  .logo-track img {
+    height: 45px;
+  }
+
+  .accreditation-card {
+    flex: 0 0 140px;
+    max-width: 140px;
+    padding: 16px;
+  }
+
+  .accreditation-card img {
+    max-height: 40px;
+  }
+
+  .accreditation-scroll{
+    max-width: 85vw;
+  }
 }
