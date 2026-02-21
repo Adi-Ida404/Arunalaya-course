@@ -1,7 +1,6 @@
 @media (max-width: 768px) {
-
   .container {
-    margin-top: 20px;
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
   }
@@ -86,8 +85,8 @@
 
   .instructor-name span{
     font-size: 12px;
-    font-weight: 600;
-    line-height: 0.8;
+    font-weight: 400;
+    line-height: 0.5;
   }
 
   
@@ -179,12 +178,72 @@
     border-radius: 0;
     padding: 16px;
   }
-
-  .container {
-    margin-top: 120px; /* prevent content hiding under fixed bar */
-  }
   
   .price {
     font-size: 26px;
+  }
+
+  .modal-content{
+    border-radius: 0;
+  }
+
+  .curriculum-section {
+    overflow: hidden;   /* prevents section overflow */
+  }
+
+  .curriculum-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 220px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .curriculum-row {
+    display: flex !important;   /* override desktop grid */
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  .curriculum-card {
+    flex: 0 0 80%;      /* card width */
+    max-width: 80%;
+    padding: 10px; 
+  }
+
+  .curriculum-card h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .curriculum-card ul {
+    padding-left: 12px;
+    margin-bottom: 8px;
+  }
+
+  .curriculum-card li {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+   .site-footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding-top: 15px;
+  }
+
+  .stats{
+    font-size: 10px;
   }
 }
