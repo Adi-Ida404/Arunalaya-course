@@ -53,13 +53,87 @@
       <div class="section">
         <h2>What you'll learn</h2>
         <div class="learn-list">
-          <div class="learn-item"><span>✔</span> Understand the fundamentals of Kinesiology and Clinical Taping principles</div>
-          <div class="learn-item"><span>✔</span>  Learn step-by-step application techniques for sports and rehabilitation taping</div>
-          <div class="learn-item"><span>✔</span> Apply taping methods for pain management and injury prevention</div>
-          <div class="learn-item"><span>✔</span> Assess posture and movement patterns before taping</div>
-          <div class="learn-item"><span>✔</span> Perform biomechanical taping for common musculoskeletal conditions</div>
-          <div class="learn-item"><span>✔</span> Confidently use taping in clinical, sports, and rehabilitation settings</div>
+          <div class="learn-item"><span><img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg"></span>Learn Kinesiology, Rigid, Semi-elastic & Sports Taping.</div>
+          <div class="learn-item"><span><img src="https://images.pexels.com/photos/5794057/pexels-photo-5794057.jpeg"></span>Understand the Physiology behind Taping for effective treatment.</div>
+          <div class="learn-item"><span><img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg"></span>Practical demonstrations with clinical case studies including women health and bio-mechanical Taping.</div>
+          <div class="learn-item"><span><img src="https://images.pexels.com/photos/5794057/pexels-photo-5794057.jpeg"></span>Application in 200+ conditions – Musculoskeletal, Paediatric, Neurological conditions and Postural issues.</div>
+          <div class="learn-item"><span><img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg"></span> Perform biomechanical taping for common musculoskeletal conditions</div>
+          <div class="learn-item"><span><img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg"></span>Advanced techniques: combination taping, biomechanical corrections, and more.</div>
         </div>
+      </div>
+
+      <!-- Course Description -->
+      <div class="section">
+        <h2>About the Program</h2>
+
+        <!-- Always visible -->
+        <p class="section-text">
+          The Certified Tapedia Expert (CTE) course is a comprehensive deep dive into the art and science of taping techniques. Designed for physiotherapists, sports therapists, and healthcare professionals, this course explores Kinesiology, Rigid, Semi-elastic, and Sports taping applications. Learn to assess, diagnose, and apply taping techniques for musculoskeletal, neurological, paediatric, women health, bio-mechanical and postural dysfunctions. Whether you are managing athletic injuries, chronic pain, or rehabilitation, this course equips you with 200+ taping techniques and real-world clinical applications to elevate your practice.
+        </p>
+
+        <!-- Hidden Content -->
+        <div class="read-more-content" id="readMoreContent">
+          <ul class="about-list">
+            <li>Introduction to Tapedia and Taping Concepts</li>
+            <li>Understanding Different Types of Tapes</li>
+            <li>Physiology Behind Taping</li>
+            <li>Principles of Taping Techniques</li>
+            <li>Application of Taping for Muscles, Tendons, Ligaments & Joints</li>
+            <li>Advanced Taping for Clinical Conditions</li>
+            <li>Taping for Postural, Neurological Dysfunctions, Paediatric and Women Health</li>
+          </ul>
+        </div>
+
+        <!-- Button -->
+        <button class="read-more-btn" onclick="toggleReadMore()">Read More</button>
+      </div>
+
+      <!-- Eligibility -->
+      <div class="section">
+        <h2>Eligibility</h2>
+        <ul class="eligibility-list">
+          <li>BPT</li>
+          <li>MPT</li>
+          <li> B.P.Ed.</li>
+          <li>Coaches</li>
+          <li>Fitness Trainers</li>
+        </ul>
+      </div>
+
+      <!-- FAQ -->
+      <div class="section faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-card">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Will I receive a certificate after completion?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, you will receive a certification upon successful completion of the course.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Is this course suitable for beginners?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            This course is ideal for physiotherapy students and professionals with a basic understanding of anatomy and rehabilitation.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How long will I have access to the course?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            You will have lifetime access to all course materials and future updates.
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -87,6 +161,35 @@
     </aside>
 
   </div>
+
+  <script>
+    function toggleReadMore() {
+      const content = document.getElementById("readMoreContent");
+      const btn = document.querySelector(".read-more-btn");
+
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        btn.innerText = "Read More";
+      } else {
+        content.style.display = "block";
+        btn.innerText = "Read Less";
+      }
+    }
+
+    function toggleFaq(element) {
+    const card = element.parentElement;
+    const answer = card.querySelector(".faq-answer");
+    const icon = card.querySelector(".faq-icon");
+
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      icon.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      icon.textContent = "−";
+    }
+  }
+  </script>
 </body>
 
 </html>
