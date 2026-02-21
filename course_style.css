@@ -665,7 +665,7 @@ body {
   line-height: 1.6;
 }
 
-.footer-col ul {
+.footercol ul {
   list-style: none;
   padding: 0;
 }
@@ -693,4 +693,4 @@ body {
   text-align: center;
   font-size: 13px;
   color: #64748b;
-}
+}-
