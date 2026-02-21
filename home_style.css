@@ -241,9 +241,9 @@ html, body {
 
 /* CTA SECTION */
 .cta-section {
-  margin: 80px auto;
+  margin: 60px auto 20px auto;
   max-width: 1000px;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
   border-radius: 20px;
   background: linear-gradient(90deg, #fd9b59, #ffbd2f);
@@ -351,4 +351,70 @@ html, body {
 .card-footer {
   font-size: 14px;
   opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+.course-footer {
+  background: #0f172a; /* dark navy */
+  color: #e5e7eb;
+  padding: 60px 20px 20px 20px;
+  font-family: inherit;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* ===== Bottom Bar ===== */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
 }
