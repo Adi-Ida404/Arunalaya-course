@@ -104,6 +104,82 @@
         </ul>
       </div>
 
+      <!-- Course Curriculum -->
+      <section class="section curriculum-section">
+        <h2>Course Curriculum</h2>
+
+        <!-- Module -->
+        <div class="curriculum-module">
+
+          <div class="module-header">
+            <div class="module-left">
+              <div class="module-icon">▶</div>
+              <div>
+                <div class="module-title">Theory</div>
+                <div class="module-meta">Sessions: 3 | Time: 15 min 7 sec</div>
+              </div>
+            </div>
+            <div class="module-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+            </div>
+          </div>
+
+          <div class="module-content">
+
+            <div class="lesson">
+              <span>📹 Intro to Taping Theory</span>
+              <span class="lesson-time">15 min 7 sec</span>
+            </div>
+
+            <div class="lesson">
+              <span>📄 TAPEDIA the Fundamental (25 pages) PDF</span>
+            </div>
+
+            <div class="lesson">
+              <span>📄 TAPEDIA Optimum (29 pages) PDF</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Module -->
+        <div class="curriculum-module">
+
+          <div class="module-header">
+            <div class="module-left">
+              <div class="module-icon">▶</div>
+              <div>
+                <div class="module-title">Theory</div>
+                <div class="module-meta">Sessions: 3 | Time: 15 min 7 sec</div>
+              </div>
+            </div>
+            <div class="module-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+            </div>
+          </div>
+
+          <div class="module-content">
+
+            <div class="lesson">
+              <span>📹 Intro to Taping Theory</span>
+              <span class="lesson-time">15 min 7 sec</span>
+            </div>
+
+            <div class="lesson">
+              <span>📄 TAPEDIA the Fundamental (25 pages) PDF</span>
+            </div>
+
+            <div class="lesson">
+              <span>📄 TAPEDIA Optimum (29 pages) PDF</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
       <!-- FAQ -->
       <div class="section faq-section">
         <h2>Frequently Asked Questions</h2>
@@ -146,7 +222,7 @@
       <div class="price">₹3200 <span class="price-strike">₹7000</span></div>
       <div class="price-sub">One-time payment • Lifetime access</div>
 
-      <button class="btn-primary">Enroll Now</button>
+      <button class="btn-primary" onclick="openModal()">Enroll Now</button>
       <button class="btn-secondary">Pay in 7 installments of ₹458</button>
 
       <ul class="features">
@@ -158,13 +234,26 @@
         <li><span>✔</span> Full lifetime access</li>
       </ul>
 
-      <div class="guarantee">
-        <strong>30-day money-back guarantee</strong><br>
-        Not the right fit? Get a full refund within 30 days. No questions asked.
-      </div>
     </aside>
 
   </div>
+
+  <!-- ENROLL MODAL -->
+  <div class="enroll-modal" id="enrollModal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+
+    <div class="modal-content">
+      <h3>Complete Your Enrollment</h3>
+      <p>Secure your seat in the Certification in Clinical Taping course.</p>
+
+      <button class="btn-primary" style="margin-top:20px;">
+        Proceed to Payment
+      </button>
+
+      <button class="btn-secondary" onclick="openModal()">Pay in 7 Installments </button>
+    </div>
+  </div>
+
 
   <script>
     function toggleReadMore() {
@@ -191,6 +280,29 @@
     } else {
       answer.style.display = "block";
       icon.textContent = "−";
+    }
+  }
+
+  const modules = document.querySelectorAll(".module-header");
+
+  modules.forEach(header => {
+    header.addEventListener("click", () => {
+      const module = header.parentElement;
+      module.classList.toggle("active");
+    });
+  });
+
+  function openModal() {
+    const modal = document.getElementById("enrollModal");
+    if (modal) {
+      modal.classList.add("active");
+    }
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("enrollModal");
+    if (modal) {
+      modal.classList.remove("active");
     }
   }
   </script>

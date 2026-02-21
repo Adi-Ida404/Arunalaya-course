@@ -155,4 +155,36 @@
   .instructor{
     padding: 8px 8px;
   }
+
+  /* Collapse sidebar content */
+  .sidebar {
+    position: relative;
+    padding: 20px;
+  }
+
+  /* Hide everything except price + primary button */
+  .sidebar .price-sub,
+  .sidebar .btn-secondary,
+  .sidebar .features {
+    display: none;
+  }
+
+  /* Make it compact */
+  .sidebar {
+    position: fixed;
+    top:80vh;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-radius: 0;
+    padding: 16px;
+  }
+
+  .container {
+    margin-top: 120px; /* prevent content hiding under fixed bar */
+  }
+  
+  .price {
+    font-size: 26px;
+  }
 }
