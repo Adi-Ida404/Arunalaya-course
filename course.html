@@ -223,7 +223,7 @@
       <div class="price-sub">One-time payment • Lifetime access</div>
 
       <button class="btn-primary" onclick="openModal()">Enroll Now</button>
-      <button class="btn-secondary">Pay in 7 installments of ₹458</button>
+      <button class="btn-secondary" onclick="openModal2()">Order with Certificate (Home Delivered)</button>
 
       <ul class="features">
         <li><span>✔</span> 20+ hours on‑demand video</li>
@@ -243,14 +243,15 @@
     <div class="modal-overlay" onclick="closeModal()"></div>
 
     <div class="modal-content">
+
       <h3>Complete Your Enrollment</h3>
-      <p>Secure your seat in the Certification in Clinical Taping course.</p>
+      <div class="price">₹3200 <span class="price-strike">₹7000</span></div>
 
       <button class="btn-primary" style="margin-top:20px;">
         Proceed to Payment
       </button>
 
-      <button class="btn-secondary" onclick="openModal()">Pay in 7 Installments </button>
+      <button class="btn-secondary" onclick="openModal2();">Order with Certificate (Home Delivered)</button>
     </div>
   </div>
 
@@ -303,6 +304,28 @@
     const modal = document.getElementById("enrollModal");
     if (modal) {
       modal.classList.remove("active");
+    }
+  }
+
+  function openModal2() {
+    // Update ALL price blocks (sidebar + modal)
+    const priceBlocks = document.querySelectorAll('.price');
+
+    priceBlocks.forEach(block => {
+      // Update main price (first text node only)
+      block.childNodes[0].nodeValue = '₹4000 ';
+
+      // Update strike price inside span
+      const strike = block.querySelector('.price-strike');
+      if (strike) {
+        strike.textContent = '₹8000';
+      }
+    });
+
+    // Optional: open modal if needed
+    const modal = document.getElementById("enrollModal");
+    if (modal) {
+      modal.classList.add("active");
     }
   }
   </script>
