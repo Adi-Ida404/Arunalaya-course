@@ -120,8 +120,8 @@
   }
 
   .eligibility-list li{
-    font-size: 12px;
-    padding: 8px 12px;
+    font-size: 10px;
+    padding: 2px 12px 2px 8px;
   }
 
   .faq-question{
@@ -199,19 +199,19 @@
   .curriculum-scroll {
     overflow-x: auto;
     overflow-y: hidden;
-    width: 220px;
+    width: 80vw;
     -webkit-overflow-scrolling: touch;
   }
 
   .curriculum-row {
-    display: flex !important;   /* override desktop grid */
+    display: flex !important;
     gap: 5px;
     padding: 10px 0;
   }
 
   .curriculum-card {
-    flex: 0 0 80%;      /* card width */
-    max-width: 80%;
+    flex: 0 0 100%;      /* card width */
+    max-width: 100%;
     padding: 10px; 
   }
 
@@ -251,5 +251,47 @@
 
   .stats{
     font-size: 10px;
+  }
+
+  .footer-brand{
+    justify-content: center;
+  }
+
+  .callback-section{
+    padding: 30px 16px;
+  }
+
+  .callback-card {
+    display: flex;              /* change from grid */
+    flex-direction: column;     /* stack vertically */
+    gap: 30px;
+    padding: 28px;
+  }
+
+  .callback-left {
+    width: 100%;
+  }
+
+  .callback-left h2{
+    font-size: 16px;
+  }
+
+  .callback-left p{
+    font-size: 12px;
+  }
+
+
+  .callback-form {
+    width: 100%;
+  }
+
+  .form-group input {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    padding: 16px;
+    font-size: 15px;
   }
 }
