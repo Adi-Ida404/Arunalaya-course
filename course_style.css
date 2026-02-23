@@ -756,7 +756,7 @@ body {
 .form-group input:focus {
   border-color: #f1b863;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(241, 184, 99, 0.15);
+  box-shadow: 2 2 2 3px rgba(189, 144, 78, 0.15);
 }
 
 .accreditation-section {
