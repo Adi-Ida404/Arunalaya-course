@@ -810,3 +810,74 @@ body {
 .video-preview{
   background-color: black;
 }
+
+/* Section */
+.cpd-section {
+  padding: 20px 10px;
+}
+
+/* Card */
+.cpd-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cpd-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.cpd-card p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Modal */
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.certificate-modal.active {
+  display: flex;
+}
+
+.certificate-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.certificate-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+}
+
+.certificate-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.certificate-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+

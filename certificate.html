@@ -69,9 +69,8 @@
 
         <!-- Always visible -->
         <p class="section-text">
-          The Certified Tapedia Expert (CTE) course is a comprehensive deep dive into the art and science of Physiotherapy techniques. Designed for physiotherapists, sports therapists, and healthcare professionals, this course explores Kinesiology, Rigid, Semi-elastic, and Sports Physiotherapy applications. Learn to assess, diagnose, and apply Physiotherapy techniques for musculoskeletal, neurological, paediatric, women health, bio-mechanical and postural dysfunctions.
+          The Certified Sports Physiotherapy & Sports Rehab Specialist (CSPRS) program is designed for physiotherapists aiming to enhance their expertise in sports injury management, rehabilitation, and performance enhancement. Led by Dr. Chakshu Bansal, a global leader in sports therapy and rehabilitation, this course provides a comprehensive, clinical approach to treating and preventing sports injuries.This program covers advanced assessment techniques, manual therapies, exercise prescription, taping methods, and rehabilitation protocols used by top sports therapists worldwide.
         </p>
-
         <!-- Hidden Content -->
         <div class="read-more-content" id="readMoreContent">
           <p class="section-text">
@@ -79,14 +78,28 @@
           </p>
 
           <ul class="about-list">
-            <li>Introduction to Tapedia and Physiotherapy Concepts</li>
-            <li>Understanding Different Types of Tapes</li>
-            <li>Physiology Behind Physiotherapy</li>
-            <li>Principles of Physiotherapy Techniques</li>
-            <li>Application of Physiotherapy for Muscles, Tendons, Ligaments & Joints</li>
-            <li>Advanced Physiotherapy for Clinical Conditions</li>
-            <li>Physiotherapy for Postural, Neurological Dysfunctions, Paediatric and Women Health</li>
+            <li>Dry Needling – ₹8,500</li>
+            <li>Taping – ₹4,500</li>
+            <li>Soft Tissue Manual Therapy – ₹6,500</li>
+            <li>Manual Therapy – ₹5,000</li>
+            <li>Radiodiagnosis – ₹2,500</li>
+            <li>Biomechanical Analysis – ₹5,500</li>
+            <li>Assessment & Diagnosis – ₹5,500</li>
+            <li>Instrument-Assisted Soft Tissue Mobilization (IASTM) – ₹3,500/li>
+            <li>Sports-Specific Rehabilitation – ₹5,500</li>
+            <li>Applied Biomechanics – ₹4,500</li>
+            <li>Neural Mobilization – ₹4,500</li>
+            <li>Clinical Anatomy – ₹4,500</li>
+            <li>Diagnosis Making – ₹4,500</li>
+            <li>Sports Nutrition – ₹2,500</li>
+            <li>Gym & Sports Injury Rehab – ₹5,500</li>
+            <li>Myofascial Release – ₹4,500</li>
+            <li>Rehabilitation - ₹9,500</li>
           </ul>
+
+          <p>
+            Through online sessions, participants will learn about technical aspects, having lifetime access to the practical demo material so you can revist and revise the concepts and mentorship from Dr. Chakshu to guide you with your clinical cases.
+          </p>
         </div>
 
         <!-- Button -->
@@ -155,6 +168,45 @@
           </div>
         </div>
       </section>
+
+      <!-- CPD Certificate Section -->
+      <section class="cpd-section">
+
+        <h2>Certification & CPD</h2>
+
+        <div class="cpd-card">
+          <div class="cpd-left">
+            <h4>CSPRS Certified Specialist</h4>
+            <p><strong>CPD Points:</strong> 12</p>
+          </div>
+
+          <div class="cpd-right">
+            <button class="btn-primary" onclick="openCertificateModal()">
+              View Sample Certificate
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- Certificate Modal -->
+      <div class="certificate-modal" id="certificateModal">
+        <div class="certificate-overlay" onclick="closeCertificateModal()"></div>
+
+        <div class="certificate-content">
+          <img src="https://d502jbuhuh9wk.cloudfront.net/courses/645b4141e4b08c3db6046d0a/GMcUm5.png" alt="Sample Certificate">
+
+          <div class="certificate-actions">
+            <button class="btn-secondary" onclick="shareCertificate()">
+              Share
+            </button>
+            <button class="btn-primary" onclick="closeCertificateModal()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
       
       <!-- Course Curriculum -->
       <section class="section curriculum-section">
@@ -358,12 +410,14 @@
       <button class="btn-primary" onclick="openModal()">Enroll Now</button>
 
       <ul class="features">
-        <li><span>✔</span> 20+ hours on‑demand video</li>
-        <li><span>✔</span> Hands-on physiotherapy exercises</li>
-        <li><span>✔</span> Real-world scenarios</li>
-        <li><span>✔</span> Community forum access</li>
-        <li><span>✔</span> Certificate of completion</li>
-        <li><span>✔</span> Full lifetime access</li>
+        <li><span>✔</span>Get your basis clear in order to do on efficient</li>
+        <li><span>✔</span>Learn about 390+ conditions</li>
+        <li><span>✔</span>Treatment - Content over 30+ courses including Dry Needling, Soft Tissue Manual thrapy, KKMT, Taping, and lot more.</li>
+        <li><span>✔</span>Sports Rehab, Pain Management & Athlete Recovery</li>
+        <li><span>✔</span>Sports Nutrition</li>
+        <li><span>✔</span>Special Population</li>
+        <li><br></br></li>
+        <li><a href="fellowship.html">Check out our Fellowship Program => </a> </li>
       </ul>
 
     </aside>
@@ -387,7 +441,7 @@
 
       <label style="display:flex; align-items:center; justify-content: center; gap:10px; margin-top:15px;">
         <input type="checkbox" id="certificateOption" onchange="toggleCertificate()">
-        Pay ₹ 4,077/ month (EMI Option)
+        Pay ₹ 4,152/ month (EMI Option)
       </label>
     </div>
   </div>
@@ -477,6 +531,26 @@
       </iframe>
     `;
   }
+
+  function openCertificateModal() {
+    document.getElementById("certificateModal").classList.add("active");
+  }
+
+  function closeCertificateModal() {
+    document.getElementById("certificateModal").classList.remove("active");
+  }
+
+  function shareCertificate() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Sports Physiotherapist Certification',
+        text: 'Check out this CPD Certified Sports Physiotherapist Course!',
+        url: window.location.href
+      });
+    } else {
+      alert("Sharing not supported on this device.");
+    }
+}
   </script>
 </body>
 

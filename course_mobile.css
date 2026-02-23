@@ -321,4 +321,10 @@
   .accreditation-scroll{
     max-width: 85vw;
   }
+
+  .cpd-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }

@@ -155,6 +155,45 @@
           </div>
         </div>
       </section>
+
+      <!-- CPD Certificate Section -->
+      <section class="cpd-section">
+
+        <h2>Certification & CPD</h2>
+
+        <div class="cpd-card">
+          <div class="cpd-left">
+            <h4>CSPRS Certified Specialist</h4>
+            <p><strong>CPD Points:</strong> 12</p>
+          </div>
+
+          <div class="cpd-right">
+            <button class="btn-primary" onclick="openCertificateModal()">
+              View Sample Certificate
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- Certificate Modal -->
+      <div class="certificate-modal" id="certificateModal">
+        <div class="certificate-overlay" onclick="closeCertificateModal()"></div>
+
+        <div class="certificate-content">
+          <img src="https://d502jbuhuh9wk.cloudfront.net/courses/696226c1bb5f4611e0b464f9/R4h0gwhatsappimage20260112at1.21.22pm.jpg" alt="Sample Certificate">
+
+          <div class="certificate-actions">
+            <button class="btn-secondary" onclick="shareCertificate()">
+              Share
+            </button>
+            <button class="btn-primary" onclick="closeCertificateModal()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
       
       <!-- Course Curriculum -->
       <section class="section curriculum-section">
@@ -364,6 +403,8 @@
         <li><span>✔</span> Community forum access</li>
         <li><span>✔</span> Certificate of completion</li>
         <li><span>✔</span> Full lifetime access</li>
+        <li><br></br></li>
+        <li><a href="certificate.html">Check out our certificate Program => </a> </li>
       </ul>
 
     </aside>
@@ -476,6 +517,26 @@
         allowfullscreen>
       </iframe>
     `;
+  }
+
+  function openCertificateModal() {
+    document.getElementById("certificateModal").classList.add("active");
+  }
+
+  function closeCertificateModal() {
+    document.getElementById("certificateModal").classList.remove("active");
+  }
+
+  function shareCertificate() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Sports Physiotherapist Certification',
+        text: 'Check out this CPD Certified Sports Physiotherapist Course!',
+        url: window.location.href
+      });
+    } else {
+      alert("Sharing not supported on this device.");
+    }
   }
   </script>
 </body>
