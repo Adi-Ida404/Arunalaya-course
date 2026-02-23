@@ -49,7 +49,7 @@ h2 {
 .header-img {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 35px;
   background-color: rgba(248, 213, 138, 0.2);
   display: flex;
   align-items: center;
@@ -785,7 +785,7 @@ body {
   max-width: 180px;
   background: #ffffff;
   border-radius: 16px;
-  padding: 20px;
+  padding: 20px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
