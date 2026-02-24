@@ -890,3 +890,60 @@ body {
   gap: 15px;
 }
 
+.video-testimonials {
+  background: #F8FAFC;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.video-card {
+  background: #fffaf2; /* very light warm yellow */
+  border: 2px solid #f5b041; /* soft orange border */
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(245, 176, 65, 0.15);
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(245, 176, 65, 0.25);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 177.77%; /* 9:16 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
