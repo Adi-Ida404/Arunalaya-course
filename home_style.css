@@ -498,7 +498,7 @@ html, body {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 700px) {
   .membership-container {
     flex-direction: column;
   }
@@ -510,5 +510,10 @@ html, body {
   .membership-list {
     padding-left: 0;
     list-style-position: inside;
+  }
+
+  .membership-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 }
