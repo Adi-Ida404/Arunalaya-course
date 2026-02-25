@@ -26,8 +26,8 @@
 
   <section class="hero">
     <div class="hero-slides">
-        <div class="slide active" style="background-image: url('IMAGE1.jpg')"></div>
-        <div class="slide" style="background-image: url('IMAGE2.jpg')"></div>
+        <div class="slide active" style="background-image: url('https://images.pexels.com/photos/4473636/pexels-photo-4473636.jpeg')"></div>
+        <div class="slide" style="background-image: url('Gemini_Generated_Image_6d3bvq6d3bvq6d3b.jpg')"></div>
     </div>
 
     <div class="hero-content">
@@ -38,11 +38,11 @@
         <a href="#" class="btn-primary">Shop Products</a>
         <a href="#" class="btn-secondary">Explore Courses</a>
         </div>
-
-        <div class="slide-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        </div>
+    </div>
+    
+    <div class="slide-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
     </div>
     </section>
 
@@ -106,6 +106,72 @@
     </div>
   </section>
 
+  <div class="floating-skeleton">
+    <img src="physical_therapy_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Human Skeleton Icon" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="course-footer">
+
+    <div class="footer-container">
+
+      <!-- Column 1 -->
+      <div class="footer-col">
+        <h3>E-PHYSIO Academy</h3>
+        <p>
+          Empowering physiotherapists and rehabilitation professionals with
+          advanced clinical skills, practical training, and globally
+          recognized certifications.
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">All Courses</a></li>
+          <li><a href="#">Certification</a></li>
+          <li><a href="#">Student Reviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-col">
+        <h4>Clinical Taping Course</h4>
+        <ul>
+          <li>Ashira Innovations Private Limited</li>
+          <li>All Rights Reserved</li>
+          <li>BP-15, 2nd Floor, Patel Nagar West</li>
+          <li>Delhi-110008</li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p>Email:</p>
+        <p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ephysioneeds@gmail.com&su=Support%20Request&body=Hello%20Team," target="_blank">
+            ephysioneeds@gmail.com
+          </a>
+        </p>
+        <p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=support@ephysioneeds.com&su=Support%20Request&body=Hello%20Team," target="_blank">
+            support@ephysioneeds.com
+          </a>
+        </p>
+        <p class="whatsapp">WhatsApp: +91 99909 93318</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 E-PHYSIO Academy. All Rights Reserved.
+    </div>
+
+  </footer>
 <script>
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
@@ -120,6 +186,14 @@
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
   }, 5000);
+
+  const skeleton = document.querySelector(".floating-skeleton img");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const rotation = scrollY * 0.2; // control speed
+    skeleton.style.transform = `rotate(${rotation}deg)`;
+  });
 </script>
 </body>
 </html>
