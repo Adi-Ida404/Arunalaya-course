@@ -592,7 +592,7 @@ body {
 
 .site-footer {
   width: 100%;
-  color: #cbd5e1;
+  color: #525964;
   margin-top: 80px;
   padding: 60px 0 30px;
   border-radius: 20px 20px 0 0;
@@ -636,7 +636,7 @@ body {
 .footer-col p,
 .footer-col li {
   font-size: 14px;
-  color: #94a3b8;
+  color: #525964;
   line-height: 1.6;
 }
 
@@ -650,7 +650,7 @@ body {
 }
 
 .footer-col ul li a {
-  color: #94a3b8;
+  color: #525964;
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -1549,6 +1549,6 @@ h5{
 
 .template-container[_ngcontent-ng-c3330229591] {
     position: relative;
-  padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }

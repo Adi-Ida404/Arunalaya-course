@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Physio Needs – Professional Physiotherapy Tools & Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rock_style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <img src="https://d502jbuhuh9wk.cloudfront.net/logos/62bd97c60cf2f0525dc732d0.png?v=8" alt="E-Physio Needs">
+
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Products</a>
+    </nav>
+
+    <a href="#member" class="nav-btn">Join Membership</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-slides">
+        <div class="slide active" style="background-image: url('IMAGE1.jpg')"></div>
+        <div class="slide" style="background-image: url('IMAGE2.jpg')"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1>Professional Physiotherapy Certifications & Tools</h1>
+        <p>Learn clinical taping, sports rehab & advanced physiotherapy techniques.</p>
+
+        <div class="hero-buttons">
+        <a href="#" class="btn-primary">Shop Products</a>
+        <a href="#" class="btn-secondary">Explore Courses</a>
+        </div>
+
+        <div class="slide-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        </div>
+    </div>
+    </section>
+
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    Trusted by 10,000+ Physiotherapists • CPD Certified Courses • Professional Rehab Equipment
+  </div>
+
+  <section class="dual-section">
+    <div class="dual-card certifications">
+      <div class="overlay">
+        <h2>Certifications</h2>
+        <p>
+          Explore professional certification programs designed for
+          physiotherapists and healthcare practitioners to upskill and
+          enhance clinical practice.
+        </p>
+        <a href="/certifications" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="dual-card fellowship">
+      <div class="overlay">
+        <h2>Fellowship</h2>
+        <p>
+          Advanced fellowship programs for professionals seeking in-depth
+          specialization, mentorship, and clinical excellence.
+        </p>
+        <a href="/fellowship" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="popular-courses">
+    <h2 class="section-title">POPULAR COURSES</h2>
+
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg');"></div>
+        <h4>Clinical Taping Certification</h4>
+        <p class="price">₹4,999</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6111604/pexels-photo-6111604.jpeg');"></div>
+        <h4>Sports Injury Management</h4>
+        <p class="price">₹6,499</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6094080/pexels-photo-6094080.jpeg');"></div>
+        <h4>Dry Needling Program</h4>
+        <p class="price">₹8,999</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5473177/pexels-photo-5473177.jpeg');"></div>
+        <h4>Advanced Manual Therapy</h4>
+        <p class="price">₹7,499</p>
+      </div>
+    </div>
+  </section>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }, 5000);
+</script>
+</body>
+</html>
