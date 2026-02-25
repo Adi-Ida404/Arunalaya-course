@@ -211,7 +211,7 @@
 
   .curriculum-card {
     flex: 0 0 100%;      /* card width */
-    max-width: 100%;
+    max-width: 98%;
     padding: 10px; 
   }
 

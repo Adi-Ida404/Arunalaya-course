@@ -1,16 +1,8 @@
-:root {
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 40px;
-  --space-xl: 60px;
-}
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #fff7e2 30%,  #ffe9b1 55%, #ffffff 100%);;
   color: #0f172a;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +16,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: var(--space-sm);
+  margin-bottom: 16px;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -72,12 +64,12 @@ h2 {
 .subtitle {
   font-size: 18px;
   color: #475569;
-  margin-bottom: var(--space-md);
+  margin-bottom: 10px;
 }
 
 .container {
   max-width: 1200px;
-  margin: var(--space-xl) auto;
+  margin: 20px auto;
   padding: 0 24px;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -163,12 +155,14 @@ h2 {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 16px;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 30px rgba(79, 70, 229, 0.35);
+  background: black;
+  color: white;
 }
 
 /* Secondary Button */
@@ -181,7 +175,7 @@ h2 {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 16px;
   transition: all 0.2s ease;
 }
 
@@ -214,22 +208,6 @@ h2 {
   margin-top: 2px;
 }
 
-/* Guarantee Box */
-.guarantee {
-  margin-top: 24px;
-  padding: 16px;
-  background: #ecfdf5;
-  border: 1px solid #bbf7d0;
-  border-radius: 12px;
-  font-size: 14px;
-  color: #065f46;
-}
-
-.guarantee strong {
-  display: block;
-  margin-bottom: 4px;
-}
-
 .stats{
   display: flex;
   gap: 24px;
@@ -244,7 +222,7 @@ h2 {
   background: #f8fafc;
   padding: 16px 18px;
   border-radius: 14px;
-  margin: var(--space-md) 0;
+  margin:  0;
 }
 
 .instructor img {
@@ -354,7 +332,7 @@ h2 {
 }
 
 /* Optional subtle hover */
-.eligibility-list li:hover {
+.eligibility-list li :hover {
   background: #e2e8f0;
 }
 
@@ -417,17 +395,12 @@ h2 {
   text-decoration: underline;
 }
 
-/* FAQ Section */
-.faq-section {
-  margin-top: 40px;
-}
-
 .faq-card {
   background: #ffffff;
   border-radius: 14px;
   border: 1px solid #e2e8f0;
   padding: 18px 20px;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
   transition: all 0.3s ease;
 }
@@ -463,13 +436,8 @@ h2 {
   display: none;
 }
 
-/* ============================= */
-/* COURSE CURRICULUM*/
-/* ============================= */
-
 .curriculum-section {
   padding: 20px 20px;
-  background: #F8FAFC;
 }
 
 .section-title {
@@ -522,10 +490,6 @@ h2 {
   text-decoration: underline;
 }
 
-/* ========================= */
-/* ENROLL MODAL */
-/* ========================= */
-
 .enroll-modal {
   position: fixed;
   inset: 0;
@@ -534,7 +498,9 @@ h2 {
 }
 
 .enroll-modal.active {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-overlay {
@@ -548,7 +514,9 @@ h2 {
   position: relative;
   background: #ffffff;
   max-width: 420px;
-  margin: 100px auto;
+max-height: 400px;
+
+  margin: 0;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.2);
@@ -620,13 +588,10 @@ h2 {
 
 body {
   overflow-x: clip;
-}s
-
-/* ================= FOOTER ================= */
+}
 
 .site-footer {
   width: 100%;
-  background: #fafafa;
   color: #cbd5e1;
   margin-top: 80px;
   padding: 60px 0 30px;
@@ -675,7 +640,7 @@ body {
   line-height: 1.6;
 }
 
-.footercol ul {
+.footer col ul {
   list-style: none;
   padding: 0;
 }
@@ -706,8 +671,7 @@ body {
 }
 
 .callback-section {
-  padding: 60px 24px;
-  background: #F8FAFC;
+  padding: 20px 24px;
 }
 
 .callback-card {
@@ -825,9 +789,13 @@ body {
   padding: 20px 10px;
 }
 
+.cpd-title{
+  font-size: 18px;
+}
+
 /* Card */
 .cpd-card {
-  background: #f8fafc;
+  background: #ffffff;
   border-radius: 14px;
   padding: 25px;
   display: flex;
@@ -891,7 +859,6 @@ body {
 }
 
 .video-testimonials {
-  background: #F8FAFC;
   padding: 40px 20px;
   text-align: center;
 }
@@ -946,4 +913,642 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectin{
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  /* Header FIRST */
+  .course-header {
+    order: 1;
+  }
+
+  /* Properly center header */
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centers horizontally */
+    text-align: center;
+    gap: 5px;
+  }
+
+  /* Center the logo wrapper */
+  .header-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(248, 213, 138, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 174, 0, 0.2);
+  }
+
+  /* Logo image */
+  .main-header img {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+  .learn-list {
+    display: block;
+  }
+
+  .learn-item {
+    margin-bottom: 18px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    color: #475569;
+    margin: 6px 0 6px 0;
+    line-height: 1.3;
+  }
+
+  /* Payment card SECOND */
+  .sidebar {
+    order: 2;
+    margin-top: 8px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  /* Video THIRD */
+  .video-preview {
+    order: 3;
+    margin-top: 0;
+  }
+
+  .stats,
+  .instructor,
+  .section {
+    order: 4;
+    font-size: 12px;
+  }
+
+  .video-preview img {
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  .instructor img{
+    width: 52px;
+    height: 52px;
+  }
+
+  .instructor-name span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.5;
+  }
+
+  
+  .created-by {
+    font-size: 10px;
+    color: #64748b;
+    margin-bottom: 2px;
+  }
+
+  .learn-item{
+    font-size: 14px;
+    padding-bottom: 12px;
+  }
+
+  .section h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .logo-track {
+    gap: 40px;
+    animation: scrollLogos 18s linear infinite;
+  }
+
+  .logo-track img {
+    height: 45px;
+  }
+
+  .section-text{
+    font-size: 14px;
+  }
+
+  .eligibility-list li{
+    font-size: 12px;
+    padding: 2px 12px 2px 8px;
+  }
+
+  .faq-question{
+    font-size: 12px;
+  }
+
+  .faq-question span{
+    padding-right: 5px;
+  }
+
+  .faq-answer{
+    font-size: 12px;
+  }
+
+  .faq-card{
+    padding: 12px 16px;
+    margin-right: 5px;
+  }
+
+  .about-list li {
+    font-size: 12px;
+  }
+
+  .price{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .btn-primary{
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .instructor{
+    padding: 8px 8px;
+  }
+
+  /* Collapse sidebar content */
+  .sidebar {
+    position: relative;
+    padding: 20px;
+  }
+
+  /* Hide everything except price + primary button */
+  .sidebar .price-sub,
+  .sidebar .btn-secondary,
+  .sidebar .features {
+    display: none;
+  }
+
+  /* Make it compact */
+  .sidebar {
+    position: fixed;
+    top:80vh;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-radius: 0;
+    padding: 16px;
+  }
+  
+  .price {
+    font-size: 26px;
+  }
+
+  .modal-content{
+    border-radius: 0;
+  }
+
+  .curriculum-section {
+    overflow: hidden;   /* prevents section overflow */
+  }
+
+  .curriculum-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 80vw;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .curriculum-row {
+    display: flex !important;
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  .curriculum-card {
+    flex: 0 0 100%;      /* card width */
+    max-width: 98%;
+    padding: 10px; 
+  }
+
+  .curriculum-card h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .curriculum-card ul {
+    padding-left: 12px;
+    margin-bottom: 8px;
+  }
+
+  .curriculum-card li {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+   .site-footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-col {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .section,
+  .curriculum-section,
+  .faq-section,
+  .video-testimonials,
+  .callback-section,
+  .cpd-section {
+    margin: 24px 0;        /* uniform vertical spacing */
+    padding: 16px 0;      /* tighter than before */
+  }
+
+  /* Normalize headings spacing */
+  .section h2,
+  .section-title,
+  .cpd-title {
+    margin-bottom: 12px;
+  }
+
+  /* Reduce extra bottom margins from lists/cards */
+  .learn-list,
+  .eligibility-list,
+  .curriculum-row,
+  .video-grid {
+    margin-bottom: 0;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding-top: 15px;
+  }
+
+  .stats{
+    font-size: 10px;
+  }
+
+  .footer-brand{
+    justify-content: center;
+  }
+
+  .callback-section{
+    padding: 30px 16px;
+  }
+
+  .callback-card {
+    display: flex;              /* change from grid */
+    flex-direction: column;     /* stack vertically */
+    gap: 30px;
+    padding: 28px;
+  }
+
+  .callback-left {
+    width: 100%;
+  }
+
+  .callback-left h2{
+    font-size: 16px;
+  }
+
+  .callback-left p{
+    font-size: 12px;
+  }
+
+
+  .callback-form {
+    width: 100%;
+  }
+
+  .form-group input {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .accreditation-card {
+    padding: 30px;
+  }
+
+  .logo-track {
+    gap: 40px;
+    animation-duration: 18s;
+  }
+
+  .logo-track img {
+    height: 45px;
+  }
+
+  .accreditation-card {
+    flex: 0 0 140px;
+    max-width: 140px;
+    padding: 16px;
+  }
+
+  .accreditation-card img {
+    max-height: 40px;
+  }
+
+  .accreditation-scroll{
+    max-width: 85vw;
+  }
+
+  .cpd-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .cpd-left h4{
+    font-size: 18px;
+  }
+
+  .video-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .video-grid{
+    display: block;
+  }
+
+    .video-testimonials{
+    padding-top: 10px;
+    }
+
+  /* Reduce overall vertical spacing on mobile */
+  .section {
+    margin: 8px 0 !important;
+  }
+
+  .faq-section {
+    margin-top: 16px;
+  }
+
+  .video-testimonials {
+    padding: 20px 10px;
+  }
+
+  .callback-section {
+    padding: 20px 12px;
+  }
+
+  .cpd-section {
+    padding: 10px 8px;
+  }
+
+  h1 {
+    margin-bottom: 4px;
+  }
+
+  .section h2 {
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .faq-card,
+  .curriculum-card,
+  .cpd-card,
+  .callback-card {
+    padding: 12px;
+  }
+
+  .sidebar {
+    padding: 12px;
+  }
+
+  .learn-item {
+    margin-bottom: 10px;
+  }
+
+  .features li {
+    margin-bottom: 8px;
+  }
+
+  .eligibility-list {
+    gap: 8px;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+  }
+
+  .sidebar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-radius: 16px 16px 0 0;
+  padding: 14px 16px;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.12);
+  }
+  /* Normalize spacing for all sections */
+  .section,
+  .curriculum-section,
+  .cpd-section,
+  .faq-section,
+  .video-testimonials,
+  .callback-section {
+    margin: 6px 0 !important;
+    padding: 8px 12px !important;
+  }
+
+  /* Kill phantom top/bottom spacing from children */
+  .section > *:first-child,
+  .curriculum-section > *:first-child,
+  .cpd-section > *:first-child,
+  .faq-section > *:first-child,
+  .video-testimonials > *:first-child,
+  .callback-section > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  .section > *:last-child,
+  .curriculum-section > *:last-child,
+  .cpd-section > *:last-child,
+  .faq-section > *:last-child,
+  .video-testimonials > *:last-child,
+  .callback-section > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Headings */
+  .section h2,
+  .section-title,
+  .cpd-title {
+    margin: 0 0 6px 0 !important;
+  }
+
+  /* Eligibility list spacing */
+  .eligibility-list {
+    margin: 6px 0 0 0 !important;
+    padding: 0 !important;
+    gap: 8px !important;
+  }
+
+  /* Tighten global vertical rhythm */
+  .container {
+    gap: 6px !important;
+  }
+
+  .stats {
+    margin-top: 8px !important;
+  }
+
+  .instructor {
+    margin: 6px 0 !important;
+  }
+
+  section,
+  .section,
+  .curriculum-section,
+  .cpd-section,
+  .faq-section,
+  .video-testimonials,
+  .callback-section {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .callback-card {
+    padding: 25px;
+  }
+
+  .video-card{
+    margin-bottom: 20px;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  h5{
+    font-size: 14px;
+  }
+
+  .callback-card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .callback-left,
+  .callback-form {
+    width: 100% !important;
+  }
+
+  .callback-left {
+    order: 1;
+  }
+
+  .callback-form {
+    order: 2;
+  }
+}
+
+h2{
+  margin-bottom: 16px;
+}
+
+h5{
+  font-size: 16px;
+}
+
+.section {
+  padding: 16px 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: 8px 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* CPD Card layout on mobile */
+  .cpd-card {
+    flex-direction: column;
+    align-items: center;      /* centers everything */
+    text-align: center;      /* center text */
+    gap: 12px;
+  }
+
+  /* Make heading text smaller */
+  .cpd-left h5 {
+    font-size: 13px;         /* smaller title */
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .cpd-left b {
+    font-size: 12px;         /* CPD Points smaller */
+  }
+
+  /* Center the button */
+  .cpd-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cpd-right .btn-primary {
+    width: auto;            /* don’t stretch full width */
+    min-width: 200px;      /* nice button size */
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+}
+
+.instructor{
+  padding: 12px;
+  margin-top: 20px;
+  background: white;
+}
+
+.template-container[_ngcontent-ng-c3330229591] {
+    position: relative;
+  padding: 0;
+margin: 0;
 }

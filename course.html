@@ -6,7 +6,6 @@
   <title>Certification Course in Clinical Taping</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="course_style.css">
-  <link rel="stylesheet" href="course_mobile.css">
   <link rel="icon" type="image/png" href="https://d502jbuhuh9wk.cloudfront.net/logos/62bd97c60cf2f0525dc732d0.png?v=8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,11 +31,11 @@
       </div>
 
       <div class="video-preview" id="videoPreview">
-        <img src="clinical taping thumbnail.jpeg" alt="Course preview">
+        <img src="https://github.com/Adi-Ida404/Arunalaya-course/blob/main/clinical%20taping%20thumbnail.jpeg?raw=true" alt="Course preview">
         <div class="play-btn" onclick="loadVideo()">▶</div>
       </div>
       <div class="stats">
-        <div>⭐ 4.8 rating (2,847 reviews)</div>
+        <div>⭐ 4.8 rating</div>
         <div>👨‍🎓 12,340 students</div>
         <div>⏱ 8 weeks • 5-7 hrs/week</div>
       </div>
@@ -52,7 +51,7 @@
       </div>
 
       <div class="section">
-        <h2>What you'll learn</h2>
+        <h2 class="section-title">What you'll learn</h2>
         <div class="learn-list">
           <div class="learn-item"><span><img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg"></span>Learn Kinesiology, Rigid, Semi-elastic Taping.</div>
           <div class="learn-item"><span><img src="https://images.pexels.com/photos/5794057/pexels-photo-5794057.jpeg"></span>Understand the Physiology for effective treatment.</div>
@@ -95,7 +94,7 @@
 
       <!-- Eligibility -->
       <div class="section">
-        <h2>Eligibility</h2>
+        <h2 class="section-title">Eligibility</h2>
         <ul class="eligibility-list">
           <li>BPT</li>
           <li>MPT</li>
@@ -157,14 +156,14 @@
       </section>
 
       <!-- CPD Certificate Section -->
-      <section class="cpd-section">
+      <section class="section">
 
-        <h2 class="cpd-title">Certification & CPD</h2>
+        <h2 class="section-title">Certification</h2>
 
         <div class="cpd-card">
           <div class="cpd-left">
-            <h4>Clinical Taping Certification</h4>
-            <p><strong>CPD Points:</strong> 12</p>
+            <h5>Clinical Taping Certification
+            <br></br><b>CPD Points:</b> 12</p></h5>
           </div>
 
           <div class="cpd-right">
@@ -315,8 +314,8 @@
         <div class="video-container">
 
           <!-- Left Side -->
-          <div class="video-content">
-            <h2>Video Testimonials</h2>
+          <div class="section">
+            <h2 class="section-title">Video Testimonials</h2>
             <p>
               Let’s check out what we can achieve and what
               professionals think about us.
@@ -355,11 +354,15 @@
       <section class="callback-section">
         <div class="callback-card">
 
-          <div class="callback-left">
-            <h2>Request a Callback</h2>
+          <div class="section callback-left">
+            <h2 class="section-title">Request a Callback</h2>
             <p>
               We are here to assist you with any queries.
-              Feel free to contact us via WhatsApp at +91-8800220066, +91-9990100373 during office hours (9 AM to 6 PM IST, weekdays).
+              Feel free to contact us via WhatsApp at:
+              <br></br> 
+              <b><a href="tel:+918800220066" style="color: #657994; text-decoration: none;">+91-8800220066</a>,<a href="tel:+919990100373" style="color: #657994;  text-decoration: none;">+91-9990100373</a></b> during office hours (9 AM to 6 PM IST, weekdays).
+
+            <br></br>
 
               We are happy to help!
             </p>
@@ -418,7 +421,7 @@
             <h4>Contact</h4>
             <ul>
               <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=support@ephysioneeds.com&su=Support%20Request&body=Hello%20Team," target="_blank">support@ephysioneeds.com</a></li>
-              <li>Phone: +91 9990993318</li>
+              <li><a href="tel:+919990993318" style="color: #94A3BE;">Phone: +91 9990993318</a></li>
               <li>India</li>
             </ul>
           </div>
@@ -472,9 +475,8 @@
       </label>
     </div>
   </div>
-
-  <script>
-    function toggleReadMore() {
+<script> 
+   function toggleReadMore() {
       const content = document.getElementById("readMoreContent");
       const btn = document.querySelector(".read-more-btn");
 
@@ -578,7 +580,8 @@
       alert("Sharing not supported on this device.");
     }
   }
-  </script>
+
+</script>
 </body>
 
 </html>
