@@ -7,6 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="rock_style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -16,12 +17,12 @@
     <img src="https://d502jbuhuh9wk.cloudfront.net/logos/62bd97c60cf2f0525dc732d0.png?v=8" alt="E-Physio Needs">
 
     <nav>
-      <a href="#">About</a>
-      <a href="#">Courses</a>
-      <a href="#">Products</a>
+      <a href="https://www.e-physioneeds.com/blog">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#products">Products</a>
     </nav>
 
-    <a href="#member" class="nav-btn">Join Membership</a>
+    <a href="https://www.e-physioneeds.com/courses/Physio-Pro-Membership-68f793fa1389183d72cbb500" class="nav-btn">Join Membership</a>
   </header>
 
   <section class="hero">
@@ -35,8 +36,8 @@
         <p>Learn clinical taping, sports rehab & advanced physiotherapy techniques.</p>
 
         <div class="hero-buttons">
-        <a href="#" class="btn-primary">Shop Products</a>
-        <a href="#" class="btn-secondary">Explore Courses</a>
+        <a href="#products" class="btn-primary">Shop Products</a>
+        <a href="#courses" class="btn-secondary">Explore Courses</a>
         </div>
     </div>
     
@@ -53,14 +54,14 @@
 
   <section class="dual-section">
     <div class="dual-card certifications">
-      <div class="overlay">
+      <div class="overlay"  id="products">
         <h2>Certifications</h2>
         <p>
           Explore professional certification programs designed for
           physiotherapists and healthcare practitioners to upskill and
           enhance clinical practice.
         </p>
-        <a href="/certifications" class="btn-secondary">Learn More</a>
+        <a href="certification.html" class="btn-secondary">Learn More</a>
       </div>
     </div>
 
@@ -71,13 +72,39 @@
           Advanced fellowship programs for professionals seeking in-depth
           specialization, mentorship, and clinical excellence.
         </p>
-        <a href="/fellowship" class="btn-secondary">Learn More</a>
+        <a href="fellowship.html" class="btn-secondary">Learn More</a>
       </div>
     </div>
   </section>
 
   <section class="popular-courses">
-    <h2 class="section-title">POPULAR COURSES</h2>
+    <h2 class="section-title" id="courses">POPULAR COURSES</h2>
+
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg');"></div>
+        <h4>Clinical Taping Certification</h4>
+        <p class="price">₹4,999</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6111604/pexels-photo-6111604.jpeg');"></div>
+        <h4>Sports Injury Management</h4>
+        <p class="price">₹6,499</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6094080/pexels-photo-6094080.jpeg');"></div>
+        <h4>Dry Needling Program</h4>
+        <p class="price">₹8,999</p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5473177/pexels-photo-5473177.jpeg');"></div>
+        <h4>Advanced Manual Therapy</h4>
+        <p class="price">₹7,499</p>
+      </div>
+    </div>
 
     <div class="courses-grid">
       <div class="course-card">
@@ -106,8 +133,11 @@
     </div>
   </section>
 
-  <div class="floating-skeleton">
-    <img src="physical_therapy_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Human Skeleton Icon" />
+  <div class="floating-model" id="floatingModel">
+    <img id="muscleSprite" src="sprites/muscle_01.png" alt="3D Muscle Model" />
+    <div class="model-tooltip" id="modelTooltip">
+      Learn with E-Physio
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -187,12 +217,29 @@
     dots[currentSlide].classList.add('active');
   }, 5000);
 
-  const skeleton = document.querySelector(".floating-skeleton img");
+  const totalFrames = 14; // you have 14 screenshots
+  const img = document.getElementById("muscleSprite");
 
   window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const rotation = scrollY * 0.2; // control speed
-    skeleton.style.transform = `rotate(${rotation}deg)`;
+    const maxScroll = document.body.scrollHeight - window.innerHeight || 1;
+    const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+
+    // Map scroll progress to frame index
+    const frameIndex = Math.floor(progress * (totalFrames - 1)) + 1;
+
+    img.src = `sprites/muscle_${String(frameIndex).padStart(2, "0")}.png`;
+  });
+
+  const floatingModel = document.getElementById("floatingModel");
+
+  floatingModel.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent bubbling
+    floatingModel.classList.toggle("show-tooltip");
+  });
+
+  // Optional: click anywhere else closes it
+  document.addEventListener("click", () => {
+    floatingModel.classList.remove("show-tooltip");
   });
 </script>
 </body>

@@ -64,11 +64,10 @@ body {
   font-weight: 800;
   margin-bottom: 16px;
 
-  background: linear-gradient(90deg, #ffeac5, #ffc375);
+  background: linear-gradient(90deg, #FCB02C, #ffd7a4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for future compatibility */
-  color: transparent;
 }
 
 .hero p {
@@ -115,7 +114,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(22, 22, 22, 0.55), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(22, 22, 22, 0.7), rgba(0, 0, 0, 0.8));
   z-index: 2;
 }
 
@@ -466,27 +465,50 @@ body {
   transition: transform 0.25s ease;
 }
 
-.floating-skeleton {
-  display: flex;
-  padding: 10px;
+.floating-model {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 56px;
-  height: 56px;
+  bottom: 40px;
+  right: 40px;
+  width: 80px;
+  height: 100px;
+  background: black;
   z-index: 9999;
-  pointer-events: none; /* doesn't block clicks */
-  background: white;
-  border-radius: 50%;
+  pointer-events: auto; /* allow clicking now */
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 800px;
+  cursor: pointer;
 }
 
-.floating-skeleton img {
-  width: 90%;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.1s linear;
+.floating-model img {
+  height: 80px;
 }
 
+/* Tooltip */
+.model-tooltip {
+  position: absolute;
+  right: 100%;
+  margin-right: 10px;
+  background: #000;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+/* Visible state */
+.floating-model.show-tooltip .model-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
 .course-footer {
   background: #FFD894;
   padding: 60px 0 20px;
@@ -589,5 +611,17 @@ body {
 
   .popular-courses .section-title {
     font-size: 24px;
+  }
+
+  .floating-model {
+    width: 52px;
+    height: 64px;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 12px;
+  }
+
+  .floating-model img {
+    height: 50px;
   }
 }
