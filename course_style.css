@@ -35,7 +35,6 @@ h2 {
   height: auto;
   border-radius: 50%;
   object-fit: cover;
-  padding-top: 10px;
 }
 
 .header-img {
@@ -1417,7 +1416,6 @@ body {
   .callback-section {
     margin-top: 16px !important;
     margin-bottom: 16px !important;
-    padding-top: 16px !important;
     padding-bottom: 16px !important;
   }
 
@@ -1968,6 +1966,35 @@ h5{
     border-radius: 0;                 /* optional: full-bleed look */
   }
 
+  .course-hero {
+    position: relative;
+    margin-bottom: -80px;   /* pulls next section up */
+    padding-bottom: 120px; /* ensures image visually extends down */
+  }
+
+  .section {
+    position: relative;
+    z-index: 5;                 /* above hero image */
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  .course-hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+
   .curriculum-row{
     padding-left: 12px;
   }
@@ -1979,4 +2006,12 @@ h5{
   .section-title svg{
     color: grey;
   }
+
+  .section.about-section {
+    transform: translateY(-20px);
+  }
+}
+
+.header-img{
+  padding: 0;
 }
