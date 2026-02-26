@@ -1947,4 +1947,17 @@ h5{
   .accordion-icon{
     opacity: 1;
   }
+
+  .course-title{
+    font-size: 20px;
+  }
+
+  .subtitle{
+    font-size: 12px;
+  }
+
+  .stats{
+    color: white;
+    gap: 6px;
+  }
 }
