@@ -346,6 +346,18 @@ body {
     background: linear-gradient(120deg, rgba(0,0,0,0.75), rgba(0,0,0,0.65));
 }
 
+@media (max-width: 768px) {
+  #about {
+    background: url("https://images.pexels.com/photos/5794055/pexels-photo-5794055.jpeg?auto=compress&cs=tinysrgb&w=900")
+                center/cover no-repeat;
+  }
+
+  #courses{
+    background: url("https://images.pexels.com/photos/7659867/pexels-photo-7659867.jpeg?auto=compress&cs=tinysrgb&w=900") center/cover no-repeat;
+  }
+}
+
+
 /* Split layout for About + Courses on desktop */
 .split-sections {
   display: flex;
