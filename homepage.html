@@ -2,245 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>E-Physio Needs – Professional Physiotherapy Tools & Education</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="rock_style.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <title>Clinical Taping | E-Physioneeds Academy</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <img src="https://d502jbuhuh9wk.cloudfront.net/logos/62bd97c60cf2f0525dc732d0.png?v=8" alt="E-Physio Needs">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="https://fs-cdn.freshlearn.com/27134/logoephn-lJjNuBLXda.png" alt="E-Physioneeds Academy Logo" class="logo" />
+        <span class="brand-name">E-Physioneeds Academy</span>
+      </div>
 
-    <nav>
-      <a href="https://www.e-physioneeds.com/blog">About</a>
-      <a href="#courses">Courses</a>
-      <a href="#products">Products</a>
-    </nav>
-
-    <a href="https://www.e-physioneeds.com/courses/Physio-Pro-Membership-68f793fa1389183d72cbb500" class="nav-btn">Join Membership</a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#certification">Certification</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-slides">
-        <div class="slide active" style="background-image: url('https://images.pexels.com/photos/4473636/pexels-photo-4473636.jpeg')"></div>
-        <div class="slide" style="background-image: url('Gemini_Generated_Image_6d3bvq6d3bvq6d3b.jpg')"></div>
-    </div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <h1>Professional Physiotherapy Certifications & Tools</h1>
-        <p>Learn clinical taping, sports rehab & advanced physiotherapy techniques.</p>
+        <h1>Clinical Taping Certification</h1>
+        <p>
+        Master kinesiology, sports and biomechanical taping techniques with hands-on clinical training.
+        </p>
 
-        <div class="hero-buttons">
-        <a href="#products" class="btn-primary">Shop Products</a>
-        <a href="#courses" class="btn-secondary">Explore Courses</a>
+        <ul class="about-list">
+        <li>Introduction to Tapedia and Taping Concepts</li>
+        <li>Understanding Different Types of Tapes</li>
+        <li>Physiology Behind Taping</li>
+        <li>Principles of Taping Techniques</li>
+        <li>Application of Taping for Muscles, Tendons, Ligaments & Joints</li>
+        <li>Advanced Taping for Clinical Conditions</li>
+        <li>Taping for Postural, Neurological Dysfunctions, Paediatric and Women Health</li>
+        </ul>
+
+        <div class="hero-actions">
+        <a href="#courses" class="btn btn-primary">Explore Course</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
         </div>
-    </div>
-    
-    <div class="slide-dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
     </div>
     </section>
 
-  <!-- INFO STRIP -->
-  <div class="info-strip">
-    Trusted by 10,000+ Physiotherapists • CPD Certified Courses • Professional Rehab Equipment
-  </div>
+    <!-- HERO FLOATING COURSE CARD (Desktop float, Mobile stack) -->
+    <div class="hero-card">
+    <div class="hero-card-inner">
+        <div class="instructor">
+        <img 
+            src="https://media.licdn.com/dms/image/v2/C5603AQEBdkccC7QTdg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1661887266833?e=2147483647&v=beta&t=96s-igmAxj_unDgR5bmLvUnNuL_2fod-YQuYaGIpozE" 
+            alt="Instructor" 
+            class="instructor-img"
+        />
+        <div>
+            <h3>Course Instructor</h3>
+            <p class="instructor-name">Dr. Chakshu Bansal</p>
+        </div>
+        </div>
 
-  <section class="dual-section">
-    <div class="dual-card certifications">
-      <div class="overlay"  id="products">
-        <h2>Certifications</h2>
+        <ul class="course-highlights">
+        <li><strong>Language:</strong> English</li>
+        <li><strong>Duration:</strong> 4 Hours</li>
+        <li><strong>Skill Level:</strong> Advanced</li>
+        <li><strong>Certification:</strong> Yes</li>
+        </ul>
+
+        <div class="price-box">
+        <span class="price">₹ 3,200</span>
+        <a href="#enroll" class="btn btn-primary enroll-btn">Enroll Now</a>
+        </div>
+    </div>
+    </div>
+
+  <div class="split-sections">
+    <!-- ABOUT / INTRO SECTION -->
+    <section class="section reveal" id="about">
+        <div class="about-overlay"></div>
+        <div class="section-inner">
+        <h2>About the Program</h2>
         <p>
-          Explore professional certification programs designed for
-          physiotherapists and healthcare practitioners to upskill and
-          enhance clinical practice.
+            The Certified Tapedia Expert (CTE) course is a comprehensive deep dive into the art and science of taping techniques. Designed for physiotherapists, sports therapists, and healthcare professionals, this course explores Kinesiology, Rigid, Semi-elastic, and Sports taping applications.
+
+    Learn to assess, diagnose, and apply taping techniques for musculoskeletal, neurological, paediatric, women health, bio-mechanical and postural dysfunctions. Whether you are managing athletic injuries, chronic pain, or rehabilitation, this course equips you with 200+ taping techniques and real-world clinical applications to elevate your practice.
         </p>
-        <a href="certification.html" class="btn-secondary">Learn More</a>
-      </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section class="section reveal" id="courses">
+    <div class="courses-overlay"></div>
+
+    <div class="section-inner">
+        <h2>What You Will Learn</h2>
+
+        <ul class="learn-list section-text">
+        <li class="learn-item">
+            <span>
+            <img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg" alt="">
+            </span>
+            Learn Kinesiology, Rigid, Semi-elastic Taping.
+        </li>
+
+        <li class="learn-item">
+            <span>
+            <img src="https://images.pexels.com/photos/5794057/pexels-photo-5794057.jpeg" alt="">
+            </span>
+            Understand the Physiology for effective treatment.
+        </li>
+
+        <li class="learn-item">
+            <span>
+            <img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg" alt="">
+            </span>
+            Practical demonstrations with clinical case studies.
+        </li>
+
+        <li class="learn-item">
+            <span>
+            <img src="https://images.pexels.com/photos/5794057/pexels-photo-5794057.jpeg" alt="">
+            </span>
+            Application in 200+ conditions.
+        </li>
+
+        <li class="learn-item">
+            <span>
+            <img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg" alt="">
+            </span>
+            Perform biomechanical taping.
+        </li>
+
+        <li class="learn-item">
+            <span>
+            <img src="https://images.pexels.com/photos/8219158/pexels-photo-8219158.jpeg" alt="">
+            </span>
+            Advanced techniques like combination taping.
+        </li>
+        </ul>
+    </div>
+    </section>
     </div>
 
-    <div class="dual-card fellowship">
-      <div class="overlay">
-        <h2>Fellowship</h2>
-        <p>
-          Advanced fellowship programs for professionals seeking in-depth
-          specialization, mentorship, and clinical excellence.
-        </p>
-        <a href="fellowship.html" class="btn-secondary">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="popular-courses">
-    <h2 class="section-title" id="courses">POPULAR COURSES</h2>
-
-    <div class="courses-grid">
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg');"></div>
-        <h4>Clinical Taping Certification</h4>
-        <p class="price">₹4,999</p>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6111604/pexels-photo-6111604.jpeg');"></div>
-        <h4>Sports Injury Management</h4>
-        <p class="price">₹6,499</p>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6094080/pexels-photo-6094080.jpeg');"></div>
-        <h4>Dry Needling Program</h4>
-        <p class="price">₹8,999</p>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5473177/pexels-photo-5473177.jpeg');"></div>
-        <h4>Advanced Manual Therapy</h4>
-        <p class="price">₹7,499</p>
-      </div>
-    </div>
-
-    <div class="courses-grid">
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg');"></div>
-        <h4>Clinical Taping Certification</h4>
-        <p class="price">₹4,999</p>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6111604/pexels-photo-6111604.jpeg');"></div>
-        <h4>Sports Injury Management</h4>
-        <p class="price">₹6,499</p>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/6094080/pexels-photo-6094080.jpeg');"></div>
-        <h4>Dry Needling Program</h4>
-        <p class="price">₹8,999</p>
-      </div>
-
-      <div class="course-card">
-        <div class="course-img" style="background-image: url('https://images.pexels.com/photos/5473177/pexels-photo-5473177.jpeg');"></div>
-        <h4>Advanced Manual Therapy</h4>
-        <p class="price">₹7,499</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="floating-model" id="floatingModel">
-    <img id="muscleSprite" src="sprites/muscle_01.png" alt="3D Muscle Model" />
-    <div class="model-tooltip" id="modelTooltip">
-      Learn with E-Physio
-    </div>
-  </div>
 
   <!-- FOOTER -->
-  <footer class="course-footer">
-
-    <div class="footer-container">
-
-      <!-- Column 1 -->
-      <div class="footer-col">
-        <h3>E-PHYSIO Academy</h3>
-        <p>
-          Empowering physiotherapists and rehabilitation professionals with
-          advanced clinical skills, practical training, and globally
-          recognized certifications.
-        </p>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">All Courses</a></li>
-          <li><a href="#">Certification</a></li>
-          <li><a href="#">Student Reviews</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="footer-col">
-        <h4>Clinical Taping Course</h4>
-        <ul>
-          <li>Ashira Innovations Private Limited</li>
-          <li>All Rights Reserved</li>
-          <li>BP-15, 2nd Floor, Patel Nagar West</li>
-          <li>Delhi-110008</li>
-        </ul>
-      </div>
-
-      <!-- Column 4 -->
-      <div class="footer-col">
-        <h4>Contact Info</h4>
-        <p>Email:</p>
-        <p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ephysioneeds@gmail.com&su=Support%20Request&body=Hello%20Team," target="_blank">
-            ephysioneeds@gmail.com
-          </a>
-        </p>
-        <p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=support@ephysioneeds.com&su=Support%20Request&body=Hello%20Team," target="_blank">
-            support@ephysioneeds.com
-          </a>
-        </p>
-        <p class="whatsapp">WhatsApp: +91 99909 93318</p>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      © 2026 E-PHYSIO Academy. All Rights Reserved.
-    </div>
-
+  <footer class="footer">
+    <p>© 2026 E-Physioneeds Academy. All rights reserved.</p>
   </footer>
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-  const dots = document.querySelectorAll('.dot');
 
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    dots[currentSlide].classList.remove('active');
-
-    currentSlide = (currentSlide + 1) % slides.length;
-
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
-  }, 5000);
-
-  const totalFrames = 14; // you have 14 screenshots
-  const img = document.getElementById("muscleSprite");
-
-  window.addEventListener("scroll", () => {
-    const maxScroll = document.body.scrollHeight - window.innerHeight || 1;
-    const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
-
-    // Map scroll progress to frame index
-    const frameIndex = Math.floor(progress * (totalFrames - 1)) + 1;
-
-    img.src = `sprites/muscle_${String(frameIndex).padStart(2, "0")}.png`;
-  });
-
-  const floatingModel = document.getElementById("floatingModel");
-
-  floatingModel.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent bubbling
-    floatingModel.classList.toggle("show-tooltip");
-  });
-
-  // Optional: click anywhere else closes it
-  document.addEventListener("click", () => {
-    floatingModel.classList.remove("show-tooltip");
-  });
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
