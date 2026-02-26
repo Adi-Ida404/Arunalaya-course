@@ -2015,3 +2015,90 @@ h5{
 .header-img{
   padding: 0;
 }
+
+.scroll-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;              /* use viewport width instead of 100% */
+  max-width: 100vw;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  border-bottom: 1px solid #e5e7eb;
+  transform: translateY(-110%);
+  transition: transform 0.35s ease;
+  overflow: hidden;         /* prevent any child overflow */
+  box-sizing: border-box;
+}
+
+/* Visible state */
+.scroll-header.active {
+  transform: translateY(0);
+}
+
+/* Horizontal scroll container */
+.scroll-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar (mobile safe) */
+.scroll-nav::-webkit-scrollbar {
+  display: none;
+}
+.scroll-nav {
+  scrollbar-width: none;
+}
+
+/* Nav pills */
+.scroll-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #0f172a;
+  background: #f1f5f9;
+  flex-shrink: 0;           /* prevents squishing */
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.scroll-nav a:hover {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .scroll-nav {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .scroll-nav a {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
