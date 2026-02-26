@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(135deg, #fff7e2 30%,  #ffe9b1 55%, #ffffff 100%);;
+  background: white;
   color: #0f172a;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -1828,10 +1828,10 @@ h5{
     height: 55%;
     background: linear-gradient(
       to top,
-      rgba(255, 247, 226, 1) 0%,
-      rgba(255, 247, 226, 0.85) 35%,
-      rgba(255, 247, 226, 0.4) 65%,
-      rgba(255, 247, 226, 0) 100%
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0.85) 35%,
+      rgba(255, 255, 255, 0.4) 65%,
+      rgba(255, 255, 255, 0) 100%
     );
   }
 
@@ -1959,5 +1959,20 @@ h5{
   .stats{
     color: white;
     gap: 6px;
+  }
+
+  .course-hero {
+    width: 100vw;                      /* full viewport width */
+    margin-left: calc(50% - 50vw);    /* escape container */
+    margin-right: calc(50% - 50vw);
+    border-radius: 0;                 /* optional: full-bleed look */
+  }
+
+  .curriculum-row{
+    padding-left: 12px;
+  }
+
+  .mobile-brand-name{
+    font-size: 14px;
   }
 }
