@@ -512,6 +512,7 @@ body {
 .course-highlights li {
   font-size: 16px;
   margin-bottom: 8px;
+color: white;
 }
 
 /* Price + CTA */
@@ -525,7 +526,7 @@ body {
 .price {
   font-size: 26px;
   font-weight: 800;
-  color: #ffffff;
+  color: rgb(174, 209, 255);
 }
 
 /* ===== HERO CARD – MOBILE FIX ===== */
