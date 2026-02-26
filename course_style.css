@@ -1975,4 +1975,8 @@ h5{
   .mobile-brand-name{
     font-size: 14px;
   }
+
+  .section-title svg{
+    color: grey;
+  }
 }
