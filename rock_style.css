@@ -90,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   color: #ffffff;
-  background: url("https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg") center/cover no-repeat;
+  background: url("https://images.pexels.com/photos/5794059/pexels-photo-5794059.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -326,7 +326,7 @@ body {
 
 #about {
     border: solid white 2px;
- background: url("https://images.pexels.com/photos/5794055/pexels-photo-5794055.jpeg") center/cover no-repeat;
+ background: url("https://images.pexels.com/photos/5794055/pexels-photo-5794055.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
 }
 
 .about-overlay{
@@ -337,7 +337,7 @@ body {
 
 #courses{
     border: solid white 2px;
- background: url("https://images.pexels.com/photos/7659867/pexels-photo-7659867.jpeg") center/cover no-repeat;
+ background: url("https://images.pexels.com/photos/7659867/pexels-photo-7659867.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
 }
 
 .courses-overlay{
