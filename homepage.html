@@ -155,6 +155,18 @@
     <p>© 2026 E-Physioneeds Academy. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        }
+    });
+    }, { threshold: 0.2 });
+    
+    reveals.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
