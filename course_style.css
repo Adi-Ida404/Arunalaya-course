@@ -1328,8 +1328,8 @@ body {
 
   .sidebar {
   position: fixed;
-  top: 80vh;
-  bottom: 0;
+  top: 82%;
+  bottom: 1vh;
   left: 0;
   right: 0;
   z-index: 1000;
