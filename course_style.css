@@ -211,7 +211,7 @@ h2 {
 
 .stats{
   display: flex;
-  gap: 24px;
+  gap: 8px;
   margin-top: 30px;
 }
 
@@ -1258,7 +1258,7 @@ body {
   }
 
   .accreditation-card {
-    flex: 0 0 140px;
+    flex: 0 0 40px;
     max-width: 140px;
     padding: 16px;
   }
@@ -1728,8 +1728,10 @@ h5{
   .cpd-item {
     padding: 14px;
     text-align: center;
-    border: 2px solid #ff8800;
-    box-shadow: 5px 5px 0px #3b3b3b;
+    background: rgba(255, 243, 228, 0.8);
+    border: 2px solid #ffba39;
+    box-shadow: 2px 2px 2px rgba(153, 95, 24, 0.5);
+    border-radius: 15px;
   }
 
 .cpd-label {
@@ -1975,8 +1977,14 @@ s
   }
 
   .stats{
-    color: white;
+    color: rgb(255, 249, 245);
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.9);
+  }
+
+  .stats-item{
+    background: rgb(82, 82, 82, 0.5);
+    border-radius: 15px;
+    padding: 6px;
   }
 
   .course-hero {
