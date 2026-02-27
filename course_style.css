@@ -1699,7 +1699,7 @@ h5{
 
   .cpd-card.redesigned {
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 0px;
     padding: 20px;
     max-width: 520px;
   }
@@ -1716,8 +1716,8 @@ h5{
     text-align: center;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(206, 206, 206, 0.8);
-    box-shadow: 2px 2px 2px rgba(78, 78, 78, 0.2);
-    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(78, 78, 78, 0.1);
+    border-radius: 8px;
   }
 
 .cpd-label {
@@ -1910,8 +1910,9 @@ s
 .cpd-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 40px;   /* row gap, column gap */
+  gap: 40px 40px;   /* row gap, column gap */
   margin-left: 100px;
+  margin-bottom: 30px;
 }
 
 /* Each item: label + value aligned */
@@ -2131,7 +2132,7 @@ s
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  
   scroll-behavior: smooth;
 }
 
@@ -2152,3 +2153,14 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.cpd-item {
+  padding: 14px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px rgba(78, 78, 78, 0.1);
+  border-radius: 8px;
+}
+
+.container {
+  overflow: visible;
+}
