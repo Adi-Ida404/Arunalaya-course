@@ -28,6 +28,7 @@ h2 {
   justify-content: left;
   gap: 16px;
   margin-bottom: 12px;
+  margin-top: 4px;
 }
 
 .main-header img{
@@ -2150,5 +2151,9 @@ html, body {
 .learn-item{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+}
+
+.curriculum-card{
+  font-family: 'Montserrat', sans-serif;
 }
 
