@@ -28,7 +28,7 @@ h2 {
   justify-content: left;
   gap: 16px;
   margin-bottom: 12px;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .main-header img{
@@ -1114,17 +1114,6 @@ body {
     display: none;
   }
 
-  /* Make it compact */
-  .sidebar {
-    position: fixed;
-    top:80vh;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    border-radius: 0;
-    padding: 16px;
-  }
-  
   .price {
     font-size: 26px;
   }
@@ -1156,6 +1145,7 @@ body {
 
    .site-footer {
     padding: 40px 0 20px;
+    margin-bottom: 40px;
   }
 
   .footer-container {
@@ -1334,10 +1324,6 @@ body {
     padding: 12px;
   }
 
-  .sidebar {
-    padding: 12px;
-  }
-
   .learn-item {
     margin-bottom: 10px;
   }
@@ -1356,7 +1342,7 @@ body {
 
   .sidebar {
   position: fixed;
-  bottom: 0;
+  top: 81vh;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -1773,7 +1759,7 @@ h5{
 
 .btn-tertiary {
   flex: 1;
-  padding: 10px 14px;
+  padding: 4px 14px;
   border-radius: 999px;
   border: none;
   background: #0f172a;
@@ -1781,6 +1767,7 @@ h5{
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s ease;
+  margin-bottom: 18px;
 }
 
 .btn-tertiary:hover {
