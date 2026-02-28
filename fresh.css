@@ -66,12 +66,12 @@ img { display: block; }
 .btn-primary {
     background: linear-gradient(135deg, var(--virtued-gold), #ffc95b);
     color: #1f2933;
-    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.28);
+    box-shadow: 0 5px 10px rgba(15, 23, 42, 0.28);
 }
 
 .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.4);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.4);
 }
 
 .btn-ghost {
@@ -284,6 +284,7 @@ img { display: block; }
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--virtued-blue-dark);
+    text-align: center;
 }
 
 .stat-label {
@@ -387,9 +388,9 @@ img { display: block; }
     font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: #7f1d1d;
+    color: #B91C1C;
     margin-left: 0.4rem;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .hero-discount-note {
@@ -443,8 +444,8 @@ img { display: block; }
 }
 
 .hero-card-cta .btn-primary {
-    width: 100%;
     justify-content: center;
+    margin-left: 40%;
 }
 
 /* GENERIC SECTIONS */
@@ -627,35 +628,56 @@ section {
 
 /* INSTRUCTOR */
 .instructor-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
+/* Instructor Image */
 .instructor-photo {
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-soft);
-    min-width: 295px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  min-width: 260px;
+  max-width: 260px;
 }
 
 .instructor-photo img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* Text */
 .instructor-name {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-    color: #0f172a;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+  color: #0f172a;
 }
 
 .instructor-qual {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* 🔥 MOBILE FIX */
+@media (max-width: 768px) {
+  .instructor-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-heading.instructor{
+    text-align: center;
+  }
+
+  .instructor-photo {
+    min-width: 160px;
+    max-width: 200px;
+  }
 }
 
 /* REVIEWS */
@@ -1043,7 +1065,6 @@ section {
 
     .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.2fr);
     gap: 2.3rem;
     align-items: center;
     }
@@ -1062,37 +1083,26 @@ section {
 
     .two-col {
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
     gap: 2.1rem;
     align-items: flex-start;
     }
 
-    .card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
     .reviews-wrapper {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
     }
 
-    .reviews-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .light-section{
+        padding: 0 2rem;
     }
 
-    .bonus-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    .btn{
+        max-width: 80vw;
+        display: flex;
+        white-space: normal;
     }
 
     .certificate-wrapper {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-    }
-
-    .instructor-wrapper {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
-    gap: 2rem;
     }
 
     .sticky-inner {
@@ -1108,6 +1118,10 @@ section {
 
     .section-cta .btn-primary {
     width: auto;
+    }
+
+    .footer-cta{
+        margin-bottom: 80px;
     }
 }
 
@@ -1127,6 +1141,10 @@ section {
 
     .hero-cta-row .btn {
     width: auto;
+    }
+
+    .footer-cta .container {
+        justify-content: center;
     }
 }
 
@@ -1204,4 +1222,8 @@ section {
 @keyframes scaleIn {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+.footer-cta{
+    margin-bottom: 70px;
 }
