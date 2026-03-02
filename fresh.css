@@ -66,7 +66,7 @@ img { display: block; }
 .btn-primary {
     background: linear-gradient(135deg, var(--virtued-gold), #ffc95b);
     color: #1f2933;
-    box-shadow: 0 5px 10px rgba(15, 23, 42, 0.28);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
 }
 
 .btn-primary:hover {
@@ -302,7 +302,6 @@ img { display: block; }
     border: 1px solid var(--border-soft);
     box-shadow: var(--shadow-soft);
     position: relative;
-    overflow: hidden;
 }
 
 .hero-card::before {
@@ -956,18 +955,6 @@ section {
     border-radius: 6px;
 }
 
-/* STICKY BOTTOM BAR */
-.sticky-bar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    background: rgba(255,255,255,0.98);
-    border-top: 1px solid var(--border-soft);
-    backdrop-filter: blur(12px);
-}
-
 .sticky-inner {
     max-width: 1120px;
     margin: 0 auto;
@@ -1411,4 +1398,126 @@ section {
     left: 20px;
     right: 20px;
   }
+}
+
+/* FORCE REAL FIXED MODAL */
+
+#exitPopup,
+#scrollPopup,
+#certificateModal {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 999999 !important;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.sticky-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 85.5% !important;
+  z-index: 50;
+  background: rgba(255,255,255,0.98);
+  border-top: 1px solid var(--border-soft);
+  backdrop-filter: blur(12px);
+}
+
+.sticky-inner {
+
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.7rem 1.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  flex-wrap: nowrap;   /* prevents stacking */
+}
+
+/* Price section */
+.sticky-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.sticky-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #b91c1c;
+}
+
+.sticky-strike {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.sticky-actions {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.sticky-actions .btn-primary {
+  padding: 0.75rem 1.6rem;
+  white-space: nowrap;
+}
+
+.sticky-inner {
+    flex-direction: column;
+}
+
+@media (max-width: 720px) {
+    .sticky-inner {
+        flex-direction: row;
+    }
+
+    .sticky-strike{
+        font-size: 12px;
+    }
+
+    .sticky-bar{
+        top: 91% !important;
+    }
+}
+
+/* ===============================
+   MOBILE SIMPLIFICATION
+================================ */
+@media (max-width: 768px) {
+
+  .price-row {
+    margin: 0;
+  }
+
+  /* Hide popup detailed text */
+  .popup-text {
+    display: none !important;
+  }
+
+  /* Optional: reduce popup padding for mobile */
+  .popup {
+    padding: 20px !important;
+  }
+
 }
