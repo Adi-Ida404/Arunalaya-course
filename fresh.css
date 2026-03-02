@@ -66,12 +66,12 @@ img { display: block; }
 .btn-primary {
     background: linear-gradient(135deg, var(--virtued-gold), #ffc95b);
     color: #1f2933;
-    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+    box-shadow: 0 4px 10px  rgba(81, 96, 131, 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.4);
+    box-shadow: 0 6px 12px rgba(81, 96, 131, 0.3);
 }
 
 .btn-ghost {
