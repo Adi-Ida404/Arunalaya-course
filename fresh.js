@@ -1,187 +1,278 @@
-// Number roll-up for stats, triggered on scroll into view
+
+/* ==========================================
+   FRESHLEARN SAFE INITIALIZATION
+========================================== */
+
+let scriptsInitialized = false;
+
+function initAllFreshLearn() {
+
+  if (scriptsInitialized) return; // prevent double init
+  scriptsInitialized = true;
+
+  initStatsObserver();
+  animateFee();
+  startCountdown();
+  initBonusObserver();
+  initModal();
+  initLazySections();
+  initSlideImages();
+  initYoutubeLazy();
+  initPopups();
+}
+
+/* ==========================================
+   DELAY INIT (ANGULAR HYDRATION FIX)
+========================================== */
+
+window.addEventListener("load", function () {
+  setTimeout(initAllFreshLearn, 800);
+});
+
+
+/* ==========================================
+   COUNTERS
+========================================== */
+
 function animateCounters() {
-    const counters = document.querySelectorAll(".stat-number");
-    counters.forEach(counter => {
-    const target = +counter.getAttribute("data-target");
-    let current = 0;
+  const counters = document.querySelectorAll(".stat-number");
+  if (!counters.length) return;
+
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    if (!target) return;
+
     const duration = 1800;
     const startTime = performance.now();
 
     function update(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        current = Math.floor(progress * target);
-        counter.textContent = current.toLocaleString("en-IN");
-        if (progress < 1) requestAnimationFrame(update);
-        else counter.textContent = target.toLocaleString("en-IN");
+      const progress = Math.min((now - startTime) / duration, 1);
+      counter.textContent =
+        Math.floor(progress * target).toLocaleString("en-IN");
+
+      if (progress < 1) requestAnimationFrame(update);
     }
 
     requestAnimationFrame(update);
-    });
+  });
 }
 
 function initStatsObserver() {
-    const statsSection = document.getElementById("stats-section");
-    if (!statsSection) return;
+  const section = document.getElementById("stats-section");
+  if (!section || !("IntersectionObserver" in window)) return;
 
-    if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounters();
-            obs.unobserve(entry.target);
-        }
-        });
-    }, { threshold: 0.35 });
-
-    observer.observe(statsSection);
-    } else {
-    animateCounters();
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      observer.disconnect();
     }
+  }, { threshold: 0.35 });
+
+  observer.observe(section);
 }
 
-// Fee animation 150000 → 49000
+
+/* ==========================================
+   FEE
+========================================== */
+
 function animateFee() {
-    const feeElement = document.getElementById("feeValue");
-    if (!feeElement) return;
-    const start = parseInt(feeElement.dataset.start, 10);
-    const end = parseInt(feeElement.dataset.end, 10);
-    const duration = 1600;
-    const startTime = performance.now();
+  const el = document.getElementById("feeValue");
+  if (!el) return;
 
-    function update(now) {
-    const elapsed = now - startTime;
-    const progress = Math.min(elapsed / duration, 1);
+  const start = +el.dataset.start;
+  const end = +el.dataset.end;
+  if (!start || !end) return;
+
+  const duration = 1600;
+  const startTime = performance.now();
+
+  function update(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
     const current = Math.floor(start - (start - end) * progress);
-    feeElement.textContent = current.toLocaleString("en-IN");
+    el.textContent = current.toLocaleString("en-IN");
     if (progress < 1) requestAnimationFrame(update);
-    else feeElement.textContent = end.toLocaleString("en-IN");
-    }
+  }
 
-    requestAnimationFrame(update);
+  requestAnimationFrame(update);
 }
 
-// 24-hour countdown
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
 function startCountdown() {
-    const countdownEl = document.getElementById("countdown");
-    if (!countdownEl) return;
-    const endTime = Date.now() + 24 * 60 * 60 * 1000;
+  const el = document.getElementById("countdown");
+  if (!el) return;
 
-    function tick() {
-    const now = Date.now();
-    const diff = endTime - now;
-    if (diff <= 0) {
-        countdownEl.textContent = "00:00:00";
-        return;
-    }
-    const hours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, "0");
-    const minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
-    const seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, "0");
-    countdownEl.textContent = `${hours}:${minutes}:${seconds}`;
+  const endTime = Date.now() + 24 * 60 * 60 * 1000;
+
+  function tick() {
+    const diff = endTime - Date.now();
+    if (diff <= 0) return el.textContent = "00:00:00";
+
+    const h = String(Math.floor(diff / 3600000)).padStart(2,"0");
+    const m = String(Math.floor((diff % 3600000)/60000)).padStart(2,"0");
+    const s = String(Math.floor((diff % 60000)/1000)).padStart(2,"0");
+
+    el.textContent = `${h}:${m}:${s}`;
     requestAnimationFrame(tick);
-    }
+  }
 
-    tick();
+  tick();
 }
 
-// Popups
+
+/* ==========================================
+   POPUPS (GLOBAL SAFE)
+========================================== */
+
+let activePopup = null;
 let exitPopupShown = false;
 let scrollPopupShown = false;
 
-function showPopup(id) {
-    const el = document.getElementById(id);
-    if (el) el.style.display = "flex";
-}
+function initPopups() {
 
-function closePopup(id) {
+  window.showPopup = function(id) {
     const el = document.getElementById(id);
-    if (el) el.style.display = "none";
-}
+    if (!el) return;
 
-function initExitIntentPopup() {
-    document.addEventListener("mouseleave", function (e) {
-    if (e.clientY <= 0 && !exitPopupShown) {
-        exitPopupShown = true;
-        showPopup("exitPopup");
+    if (activePopup && activePopup !== el) {
+      activePopup.style.display = "none";
     }
-    });
-}
 
-function initScrollPopup() {
-    window.addEventListener("scroll", function () {
-    if (scrollPopupShown) return;
+    el.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    activePopup = el;
+  };
+
+  window.closePopup = function(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.style.display = "none";
+    document.body.style.overflow = "auto";
+    activePopup = null;
+  };
+
+  document.addEventListener("mouseleave", function (e) {
+    if (e.clientY <= 0 && !exitPopupShown && !activePopup) {
+      exitPopupShown = true;
+      showPopup("exitPopup");
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    if (scrollPopupShown || activePopup) return;
+
     const scrollPosition = window.scrollY + window.innerHeight;
     const docHeight = document.documentElement.scrollHeight;
+
     if (scrollPosition / docHeight > 0.7) {
-        scrollPopupShown = true;
-        showPopup("scrollPopup");
+      scrollPopupShown = true;
+      showPopup("scrollPopup");
     }
-    });
+  });
 }
 
-// Bonus animation on scroll
+
+/* ==========================================
+   BONUS
+========================================== */
+
 function initBonusObserver() {
-    const bonusSection = document.getElementById("bonuses");
-    if (!bonusSection || !("IntersectionObserver" in window)) return;
+  const section = document.getElementById("bonuses");
+  if (!section || !("IntersectionObserver" in window)) return;
 
-    const cards = bonusSection.querySelectorAll(".bonus-card");
-    const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        cards.forEach((card, index) => {
-            setTimeout(() => {
-            card.classList.add("bonus-animate");
-            }, index * 150);
-        });
-        obs.unobserve(entry.target);
-        }
-    });
-    }, { threshold: 0.4 });
+  const cards = section.querySelectorAll(".bonus-card");
 
-    observer.observe(bonusSection);
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      cards.forEach((card, i) =>
+        setTimeout(() => card.classList.add("bonus-animate"), i * 150)
+      );
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+
+  observer.observe(section);
 }
 
-window.addEventListener("load", () => {
-    initStatsObserver();
-    animateFee();
-    startCountdown();
-    initExitIntentPopup();
-    initScrollPopup();
-    initBonusObserver();
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+/* ==========================================
+   MODAL
+========================================== */
 
+function initModal() {
   const modal = document.getElementById("certificateModal");
   const btn = document.getElementById("viewCertificateBtn");
   const closeBtn = document.querySelector(".certificate-close");
+  if (!modal || !btn || !closeBtn) return;
 
-  // Open modal
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", () => {
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
   });
 
-  // Close modal (X)
-  closeBtn.addEventListener("click", function () {
+  function close() {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
+  }
+
+  closeBtn.addEventListener("click", close);
+  modal.addEventListener("click", e => e.target === modal && close());
+}
+
+
+/* ==========================================
+   LAZY + YOUTUBE
+========================================== */
+
+function initLazySections() {
+  const sections = document.querySelectorAll("main section:not(.hero)");
+  if (!sections.length || !("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("section-visible");
+        observer.unobserve(entry.target);
+      }
+    });
   });
 
-  // Close on outside click
-  modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
+  sections.forEach(section => observer.observe(section));
+}
+
+function initSlideImages() {
+  const images = document.querySelectorAll(".slide-image");
+  if (!images.length || !("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
   });
 
-  // Close on ESC key
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-  });
+  images.forEach(img => observer.observe(img));
+}
 
-});
+function initYoutubeLazy() {
+  document.addEventListener("click", function (e) {
+    const yt = e.target.closest(".youtube-lazy");
+    if (!yt) return;
+
+    yt.innerHTML = `
+      <iframe 
+        src="https://www.youtube.com/embed/${yt.dataset.id}?autoplay=1&rel=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    `;
+  });
+}
