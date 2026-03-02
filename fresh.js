@@ -1,25 +1,53 @@
 
-/* ==========================================
-   FRESHLEARN SAFE INITIALIZATION
-========================================== */
-
 let scriptsInitialized = false;
 
-function initAllFreshLearn() {
+(function () {
 
-  if (scriptsInitialized) return; // prevent double init
-  scriptsInitialized = true;
+  if (window.__freshLearnInitDone) return;
+  window.__freshLearnInitDone = true;
 
-  initStatsObserver();
-  animateFee();
-  startCountdown();
-  initBonusObserver();
-  initModal();
-  initLazySections();
-  initSlideImages();
+  function waitForElement(selector, callback) {
+    const interval = setInterval(() => {
+      const el = document.querySelector(selector);
+      if (el) {
+        clearInterval(interval);
+        callback();
+      }
+    }, 300);
+  }
+
+  waitForElement("#stats-section", function () {
+    initStatsObserver();
+  });
+
+  waitForElement("#feeValue", function () {
+    animateFee();
+  });
+
+  waitForElement("#countdown", function () {
+    startCountdown();
+  });
+
+  waitForElement("#bonuses", function () {
+    initBonusObserver();
+  });
+
+  waitForElement("#certificateModal", function () {
+    initModal();
+  });
+
+  waitForElement("main section", function () {
+    initLazySections();
+  });
+
+  waitForElement(".slide-image", function () {
+    initSlideImages();
+  });
+
   initYoutubeLazy();
   initPopups();
-}
+
+})();
 
 /* ==========================================
    DELAY INIT (ANGULAR HYDRATION FIX)
@@ -124,10 +152,6 @@ function startCountdown() {
 }
 
 
-/* ==========================================
-   POPUPS (GLOBAL SAFE)
-========================================== */
-
 let activePopup = null;
 let exitPopupShown = false;
 let scrollPopupShown = false;
@@ -137,6 +161,11 @@ function initPopups() {
   window.showPopup = function(id) {
     const el = document.getElementById(id);
     if (!el) return;
+
+    // 🔥 MOVE POPUP DIRECTLY TO BODY (CRITICAL FOR FRESHLEARN)
+    if (el.parentElement !== document.body) {
+      document.body.appendChild(el);
+    }
 
     if (activePopup && activePopup !== el) {
       activePopup.style.display = "none";
@@ -156,6 +185,7 @@ function initPopups() {
     activePopup = null;
   };
 
+  // Exit intent
   document.addEventListener("mouseleave", function (e) {
     if (e.clientY <= 0 && !exitPopupShown && !activePopup) {
       exitPopupShown = true;
@@ -163,6 +193,7 @@ function initPopups() {
     }
   });
 
+  // Scroll trigger
   window.addEventListener("scroll", function () {
     if (scrollPopupShown || activePopup) return;
 
