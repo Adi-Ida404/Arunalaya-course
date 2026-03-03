@@ -1295,7 +1295,7 @@ section {
 }
 
 .image-slide-section {
-  padding: 40px 20px;
+  padding: 20px 20px;
   overflow: hidden;
 }
 
@@ -1308,7 +1308,7 @@ section {
 
 .slide-image {
   flex: 1;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   transition: transform 1s cubic-bezier(.22,.61,.36,1), 
@@ -1401,6 +1401,19 @@ section {
     bottom: 20px;
     left: 20px;
     right: 20px;
+  }
+
+  .slide-heading{
+    font-size: 16px;
+  }
+
+  .slide-subtext{
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .slide-image::after{
+    background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.4));
   }
 }
 
