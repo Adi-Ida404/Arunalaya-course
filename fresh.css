@@ -370,7 +370,7 @@ img { display: block; }
 }
 
 .hero-old-price {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #9ca3af;
     text-decoration: line-through;
     margin-bottom: 0.1rem;
